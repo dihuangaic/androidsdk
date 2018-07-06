@@ -922,6 +922,34 @@ public interface AicureServicesClient {
     /**
      * 
      * 
+     * @param questionnaireId 
+     * @param language 
+     * @param authorization 
+     * @return Questionnaire
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/questionnaires/language_support/questionnaire_id/{questionnaire_id}/language/{language}", method = "GET")
+    Questionnaire questionnairesLanguageSupportQuestionnaireIdQuestionnaireIdLanguageLanguageGet(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "questionnaire_id", location = "path")
+            String questionnaireId,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "language", location = "path")
+            String language,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
+            String authorization);
+    
+    /**
+     * 
+     * 
+     * @param authorization 
+     * @return Questionnaire
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/questionnaires/language_support/questionnaire_id/{questionnaire_id}/language/{language}", method = "OPTIONS")
+    Questionnaire questionnairesLanguageSupportQuestionnaireIdQuestionnaireIdLanguageLanguageOptions(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
+            String authorization);
+    
+    /**
+     * 
+     * 
      * @param date 
      * @param trialId 
      * @param inClinic 

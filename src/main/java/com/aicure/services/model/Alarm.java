@@ -22,10 +22,25 @@ import java.util.*;
  **/
 public class Alarm {
     /**
+     * action schedule id
+     */
+    @com.google.gson.annotations.SerializedName("action_schedule_id")
+    private String actionScheduleId = null;
+    /**
+     * alarm offsets by minutes from start of time window
+     */
+    @com.google.gson.annotations.SerializedName("alarm_offsets")
+    private List<Integer> alarmOffsets = null;
+    /**
      * Serialized object or any notes
      */
     @com.google.gson.annotations.SerializedName("description")
     private String description = null;
+    /**
+     * tag
+     */
+    @com.google.gson.annotations.SerializedName("tag")
+    private String tag = null;
     /**
      * yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
      */
@@ -36,21 +51,42 @@ public class Alarm {
      */
     @com.google.gson.annotations.SerializedName("updated_at")
     private String updatedAt = null;
-    /**
-     * tag
-     */
-    @com.google.gson.annotations.SerializedName("tag")
-    private String tag = null;
+
     /**
      * action schedule id
+     *
+     * @return actionScheduleId
+     **/
+    public String getActionScheduleId() {
+        return actionScheduleId;
+    }
+
+    /**
+     * Sets the value of actionScheduleId.
+     *
+     * @param actionScheduleId the new value
      */
-    @com.google.gson.annotations.SerializedName("action_schedule_id")
-    private String actionScheduleId = null;
+    public void setActionScheduleId(String actionScheduleId) {
+        this.actionScheduleId = actionScheduleId;
+    }
+
     /**
      * alarm offsets by minutes from start of time window
+     *
+     * @return alarmOffsets
+     **/
+    public List<Integer> getAlarmOffsets() {
+        return alarmOffsets;
+    }
+
+    /**
+     * Sets the value of alarmOffsets.
+     *
+     * @param alarmOffsets the new value
      */
-    @com.google.gson.annotations.SerializedName("alarm_offsets")
-    private List<Integer> alarmOffsets = null;
+    public void setAlarmOffsets(List<Integer> alarmOffsets) {
+        this.alarmOffsets = alarmOffsets;
+    }
 
     /**
      * Serialized object or any notes
@@ -68,6 +104,24 @@ public class Alarm {
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * tag
+     *
+     * @return tag
+     **/
+    public String getTag() {
+        return tag;
+    }
+
+    /**
+     * Sets the value of tag.
+     *
+     * @param tag the new value
+     */
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 
     /**
@@ -104,60 +158,6 @@ public class Alarm {
      */
     public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
-    }
-
-    /**
-     * tag
-     *
-     * @return tag
-     **/
-    public String getTag() {
-        return tag;
-    }
-
-    /**
-     * Sets the value of tag.
-     *
-     * @param tag the new value
-     */
-    public void setTag(String tag) {
-        this.tag = tag;
-    }
-
-    /**
-     * action schedule id
-     *
-     * @return actionScheduleId
-     **/
-    public String getActionScheduleId() {
-        return actionScheduleId;
-    }
-
-    /**
-     * Sets the value of actionScheduleId.
-     *
-     * @param actionScheduleId the new value
-     */
-    public void setActionScheduleId(String actionScheduleId) {
-        this.actionScheduleId = actionScheduleId;
-    }
-
-    /**
-     * alarm offsets by minutes from start of time window
-     *
-     * @return alarmOffsets
-     **/
-    public List<Integer> getAlarmOffsets() {
-        return alarmOffsets;
-    }
-
-    /**
-     * Sets the value of alarmOffsets.
-     *
-     * @param alarmOffsets the new value
-     */
-    public void setAlarmOffsets(List<Integer> alarmOffsets) {
-        this.alarmOffsets = alarmOffsets;
     }
 
 }

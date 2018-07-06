@@ -22,72 +22,36 @@ import com.aicure.services.model.TakeMedicationStatus;
 import com.aicure.services.model.TakeMedicationStatusType;
 
 public class TakeMedicationEvent {
-    @com.google.gson.annotations.SerializedName("status")
-    private TakeMedicationStatus status = null;
-    @com.google.gson.annotations.SerializedName("updated_by")
-    private String updatedBy = null;
     @com.google.gson.annotations.SerializedName("trial_id")
     private String trialId = null;
-    @com.google.gson.annotations.SerializedName("tags")
-    private List<String> tags = null;
-    @com.google.gson.annotations.SerializedName("target_date")
-    private String targetDate = null;
-    @com.google.gson.annotations.SerializedName("created_at")
-    private String createdAt = null;
-    @com.google.gson.annotations.SerializedName("site_id")
-    private String siteId = null;
-    @com.google.gson.annotations.SerializedName("updated_at")
-    private String updatedAt = null;
-    @com.google.gson.annotations.SerializedName("created_by")
-    private String createdBy = null;
     @com.google.gson.annotations.SerializedName("patient_id")
     private String patientId = null;
+    @com.google.gson.annotations.SerializedName("target_date")
+    private String targetDate = null;
+    @com.google.gson.annotations.SerializedName("site_id")
+    private String siteId = null;
     @com.google.gson.annotations.SerializedName("source")
     private String source = null;
     @com.google.gson.annotations.SerializedName("schedule_id")
     private String scheduleId = null;
     @com.google.gson.annotations.SerializedName("action_type")
     private TakeMedicationStatusType actionType = null;
+    @com.google.gson.annotations.SerializedName("tags")
+    private List<String> tags = null;
     @com.google.gson.annotations.SerializedName("policy")
     private Policy policy = null;
+    @com.google.gson.annotations.SerializedName("status")
+    private TakeMedicationStatus status = null;
     @com.google.gson.annotations.SerializedName("reclassifications")
     private List<ReclassifiedStatusTakeMedicationStatus> reclassifications = null;
-
-    /**
-     * Gets status
-     *
-     * @return status
-     **/
-    public TakeMedicationStatus getStatus() {
-        return status;
-    }
-
-    /**
-     * Sets the value of status.
-     *
-     * @param status the new value
-     */
-    public void setStatus(TakeMedicationStatus status) {
-        this.status = status;
-    }
-
-    /**
-     * Gets updatedBy
-     *
-     * @return updatedBy
-     **/
-    public String getUpdatedBy() {
-        return updatedBy;
-    }
-
-    /**
-     * Sets the value of updatedBy.
-     *
-     * @param updatedBy the new value
-     */
-    public void setUpdatedBy(String updatedBy) {
-        this.updatedBy = updatedBy;
-    }
+    @com.google.gson.annotations.SerializedName("created_by")
+    private String createdBy = null;
+    @com.google.gson.annotations.SerializedName("created_at")
+    private String createdAt = null;
+    @com.google.gson.annotations.SerializedName("updated_by")
+    private String updatedBy = null;
+    @com.google.gson.annotations.SerializedName("updated_at")
+    private String updatedAt = null;
 
     /**
      * Gets trialId
@@ -108,21 +72,21 @@ public class TakeMedicationEvent {
     }
 
     /**
-     * Gets tags
+     * Gets patientId
      *
-     * @return tags
+     * @return patientId
      **/
-    public List<String> getTags() {
-        return tags;
+    public String getPatientId() {
+        return patientId;
     }
 
     /**
-     * Sets the value of tags.
+     * Sets the value of patientId.
      *
-     * @param tags the new value
+     * @param patientId the new value
      */
-    public void setTags(List<String> tags) {
-        this.tags = tags;
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
     }
 
     /**
@@ -144,24 +108,6 @@ public class TakeMedicationEvent {
     }
 
     /**
-     * Gets createdAt
-     *
-     * @return createdAt
-     **/
-    public String getCreatedAt() {
-        return createdAt;
-    }
-
-    /**
-     * Sets the value of createdAt.
-     *
-     * @param createdAt the new value
-     */
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    /**
      * Gets siteId
      *
      * @return siteId
@@ -177,60 +123,6 @@ public class TakeMedicationEvent {
      */
     public void setSiteId(String siteId) {
         this.siteId = siteId;
-    }
-
-    /**
-     * Gets updatedAt
-     *
-     * @return updatedAt
-     **/
-    public String getUpdatedAt() {
-        return updatedAt;
-    }
-
-    /**
-     * Sets the value of updatedAt.
-     *
-     * @param updatedAt the new value
-     */
-    public void setUpdatedAt(String updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    /**
-     * Gets createdBy
-     *
-     * @return createdBy
-     **/
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    /**
-     * Sets the value of createdBy.
-     *
-     * @param createdBy the new value
-     */
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    /**
-     * Gets patientId
-     *
-     * @return patientId
-     **/
-    public String getPatientId() {
-        return patientId;
-    }
-
-    /**
-     * Sets the value of patientId.
-     *
-     * @param patientId the new value
-     */
-    public void setPatientId(String patientId) {
-        this.patientId = patientId;
     }
 
     /**
@@ -288,6 +180,24 @@ public class TakeMedicationEvent {
     }
 
     /**
+     * Gets tags
+     *
+     * @return tags
+     **/
+    public List<String> getTags() {
+        return tags;
+    }
+
+    /**
+     * Sets the value of tags.
+     *
+     * @param tags the new value
+     */
+    public void setTags(List<String> tags) {
+        this.tags = tags;
+    }
+
+    /**
      * Gets policy
      *
      * @return policy
@@ -306,6 +216,24 @@ public class TakeMedicationEvent {
     }
 
     /**
+     * Gets status
+     *
+     * @return status
+     **/
+    public TakeMedicationStatus getStatus() {
+        return status;
+    }
+
+    /**
+     * Sets the value of status.
+     *
+     * @param status the new value
+     */
+    public void setStatus(TakeMedicationStatus status) {
+        this.status = status;
+    }
+
+    /**
      * Gets reclassifications
      *
      * @return reclassifications
@@ -321,6 +249,78 @@ public class TakeMedicationEvent {
      */
     public void setReclassifications(List<ReclassifiedStatusTakeMedicationStatus> reclassifications) {
         this.reclassifications = reclassifications;
+    }
+
+    /**
+     * Gets createdBy
+     *
+     * @return createdBy
+     **/
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    /**
+     * Sets the value of createdBy.
+     *
+     * @param createdBy the new value
+     */
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    /**
+     * Gets createdAt
+     *
+     * @return createdAt
+     **/
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    /**
+     * Sets the value of createdAt.
+     *
+     * @param createdAt the new value
+     */
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    /**
+     * Gets updatedBy
+     *
+     * @return updatedBy
+     **/
+    public String getUpdatedBy() {
+        return updatedBy;
+    }
+
+    /**
+     * Sets the value of updatedBy.
+     *
+     * @param updatedBy the new value
+     */
+    public void setUpdatedBy(String updatedBy) {
+        this.updatedBy = updatedBy;
+    }
+
+    /**
+     * Gets updatedAt
+     *
+     * @return updatedAt
+     **/
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
+
+    /**
+     * Sets the value of updatedAt.
+     *
+     * @param updatedAt the new value
+     */
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
 }

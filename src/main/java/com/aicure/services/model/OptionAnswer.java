@@ -24,20 +24,6 @@ import com.aicure.services.model.RepeatInfo;
  **/
 public class OptionAnswer {
     /**
-     * description
-     */
-    @com.google.gson.annotations.SerializedName("description")
-    private String description = null;
-    @com.google.gson.annotations.SerializedName("aiqsnum")
-    private String aiqsnum = null;
-    /**
-     * this option will trigger an action with type trigger_action_type
-     */
-    @com.google.gson.annotations.SerializedName("trigger_action_type")
-    private String triggerActionType = null;
-    @com.google.gson.annotations.SerializedName("aiqscres")
-    private String aiqscres = null;
-    /**
      * option details
      */
     @com.google.gson.annotations.SerializedName("answer")
@@ -53,82 +39,24 @@ public class OptionAnswer {
     @com.google.gson.annotations.SerializedName("next_question_id")
     private String nextQuestionId = null;
     /**
+     * this option will trigger an action with type trigger_action_type
+     */
+    @com.google.gson.annotations.SerializedName("trigger_action_type")
+    private String triggerActionType = null;
+    /**
+     * description
+     */
+    @com.google.gson.annotations.SerializedName("description")
+    private String description = null;
+    /**
      * how to repeat if choose this option
      */
     @com.google.gson.annotations.SerializedName("repeat_info")
     private RepeatInfo repeatInfo = null;
-
-    /**
-     * description
-     *
-     * @return description
-     **/
-    public String getDescription() {
-        return description;
-    }
-
-    /**
-     * Sets the value of description.
-     *
-     * @param description the new value
-     */
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * Gets aiqsnum
-     *
-     * @return aiqsnum
-     **/
-    public String getAiqsnum() {
-        return aiqsnum;
-    }
-
-    /**
-     * Sets the value of aiqsnum.
-     *
-     * @param aiqsnum the new value
-     */
-    public void setAiqsnum(String aiqsnum) {
-        this.aiqsnum = aiqsnum;
-    }
-
-    /**
-     * this option will trigger an action with type trigger_action_type
-     *
-     * @return triggerActionType
-     **/
-    public String getTriggerActionType() {
-        return triggerActionType;
-    }
-
-    /**
-     * Sets the value of triggerActionType.
-     *
-     * @param triggerActionType the new value
-     */
-    public void setTriggerActionType(String triggerActionType) {
-        this.triggerActionType = triggerActionType;
-    }
-
-    /**
-     * Gets aiqscres
-     *
-     * @return aiqscres
-     **/
-    public String getAiqscres() {
-        return aiqscres;
-    }
-
-    /**
-     * Sets the value of aiqscres.
-     *
-     * @param aiqscres the new value
-     */
-    public void setAiqscres(String aiqscres) {
-        this.aiqscres = aiqscres;
-    }
+    @com.google.gson.annotations.SerializedName("aiqscres")
+    private String aiqscres = null;
+    @com.google.gson.annotations.SerializedName("aiqsnum")
+    private String aiqsnum = null;
 
     /**
      * option details
@@ -185,6 +113,42 @@ public class OptionAnswer {
     }
 
     /**
+     * this option will trigger an action with type trigger_action_type
+     *
+     * @return triggerActionType
+     **/
+    public String getTriggerActionType() {
+        return triggerActionType;
+    }
+
+    /**
+     * Sets the value of triggerActionType.
+     *
+     * @param triggerActionType the new value
+     */
+    public void setTriggerActionType(String triggerActionType) {
+        this.triggerActionType = triggerActionType;
+    }
+
+    /**
+     * description
+     *
+     * @return description
+     **/
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * Sets the value of description.
+     *
+     * @param description the new value
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
      * how to repeat if choose this option
      *
      * @return repeatInfo
@@ -200,6 +164,42 @@ public class OptionAnswer {
      */
     public void setRepeatInfo(RepeatInfo repeatInfo) {
         this.repeatInfo = repeatInfo;
+    }
+
+    /**
+     * Gets aiqscres
+     *
+     * @return aiqscres
+     **/
+    public String getAiqscres() {
+        return aiqscres;
+    }
+
+    /**
+     * Sets the value of aiqscres.
+     *
+     * @param aiqscres the new value
+     */
+    public void setAiqscres(String aiqscres) {
+        this.aiqscres = aiqscres;
+    }
+
+    /**
+     * Gets aiqsnum
+     *
+     * @return aiqsnum
+     **/
+    public String getAiqsnum() {
+        return aiqsnum;
+    }
+
+    /**
+     * Sets the value of aiqsnum.
+     *
+     * @param aiqsnum the new value
+     */
+    public void setAiqsnum(String aiqsnum) {
+        this.aiqsnum = aiqsnum;
     }
 
 }

@@ -22,57 +22,39 @@ import com.aicure.services.model.QuestionnaireStatusAnswer;
  * QuestionnaireStatusEntryValue
  **/
 public class QuestionnaireStatusEntryValue {
-    @com.google.gson.annotations.SerializedName("updated_by")
-    private String updatedBy = null;
-    @com.google.gson.annotations.SerializedName("created_at")
-    private String createdAt = null;
-    @com.google.gson.annotations.SerializedName("question_key")
-    private String questionKey = null;
     @com.google.gson.annotations.SerializedName("questionnaire_id")
     private String questionnaireId = null;
-    @com.google.gson.annotations.SerializedName("created_by")
-    private String createdBy = null;
-    @com.google.gson.annotations.SerializedName("updated_at")
-    private String updatedAt = null;
-    @com.google.gson.annotations.SerializedName("source")
-    private String source = null;
+    @com.google.gson.annotations.SerializedName("question_key")
+    private String questionKey = null;
     @com.google.gson.annotations.SerializedName("answers")
     private List<QuestionnaireStatusAnswer> answers = null;
+    @com.google.gson.annotations.SerializedName("source")
+    private String source = null;
+    @com.google.gson.annotations.SerializedName("created_by")
+    private String createdBy = null;
+    @com.google.gson.annotations.SerializedName("created_at")
+    private String createdAt = null;
+    @com.google.gson.annotations.SerializedName("updated_by")
+    private String updatedBy = null;
+    @com.google.gson.annotations.SerializedName("updated_at")
+    private String updatedAt = null;
 
     /**
-     * Gets updatedBy
+     * Gets questionnaireId
      *
-     * @return updatedBy
+     * @return questionnaireId
      **/
-    public String getUpdatedBy() {
-        return updatedBy;
+    public String getQuestionnaireId() {
+        return questionnaireId;
     }
 
     /**
-     * Sets the value of updatedBy.
+     * Sets the value of questionnaireId.
      *
-     * @param updatedBy the new value
+     * @param questionnaireId the new value
      */
-    public void setUpdatedBy(String updatedBy) {
-        this.updatedBy = updatedBy;
-    }
-
-    /**
-     * Gets createdAt
-     *
-     * @return createdAt
-     **/
-    public String getCreatedAt() {
-        return createdAt;
-    }
-
-    /**
-     * Sets the value of createdAt.
-     *
-     * @param createdAt the new value
-     */
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
+    public void setQuestionnaireId(String questionnaireId) {
+        this.questionnaireId = questionnaireId;
     }
 
     /**
@@ -94,57 +76,21 @@ public class QuestionnaireStatusEntryValue {
     }
 
     /**
-     * Gets questionnaireId
+     * Gets answers
      *
-     * @return questionnaireId
+     * @return answers
      **/
-    public String getQuestionnaireId() {
-        return questionnaireId;
+    public List<QuestionnaireStatusAnswer> getAnswers() {
+        return answers;
     }
 
     /**
-     * Sets the value of questionnaireId.
+     * Sets the value of answers.
      *
-     * @param questionnaireId the new value
+     * @param answers the new value
      */
-    public void setQuestionnaireId(String questionnaireId) {
-        this.questionnaireId = questionnaireId;
-    }
-
-    /**
-     * Gets createdBy
-     *
-     * @return createdBy
-     **/
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    /**
-     * Sets the value of createdBy.
-     *
-     * @param createdBy the new value
-     */
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    /**
-     * Gets updatedAt
-     *
-     * @return updatedAt
-     **/
-    public String getUpdatedAt() {
-        return updatedAt;
-    }
-
-    /**
-     * Sets the value of updatedAt.
-     *
-     * @param updatedAt the new value
-     */
-    public void setUpdatedAt(String updatedAt) {
-        this.updatedAt = updatedAt;
+    public void setAnswers(List<QuestionnaireStatusAnswer> answers) {
+        this.answers = answers;
     }
 
     /**
@@ -166,21 +112,75 @@ public class QuestionnaireStatusEntryValue {
     }
 
     /**
-     * Gets answers
+     * Gets createdBy
      *
-     * @return answers
+     * @return createdBy
      **/
-    public List<QuestionnaireStatusAnswer> getAnswers() {
-        return answers;
+    public String getCreatedBy() {
+        return createdBy;
     }
 
     /**
-     * Sets the value of answers.
+     * Sets the value of createdBy.
      *
-     * @param answers the new value
+     * @param createdBy the new value
      */
-    public void setAnswers(List<QuestionnaireStatusAnswer> answers) {
-        this.answers = answers;
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    /**
+     * Gets createdAt
+     *
+     * @return createdAt
+     **/
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    /**
+     * Sets the value of createdAt.
+     *
+     * @param createdAt the new value
+     */
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    /**
+     * Gets updatedBy
+     *
+     * @return updatedBy
+     **/
+    public String getUpdatedBy() {
+        return updatedBy;
+    }
+
+    /**
+     * Sets the value of updatedBy.
+     *
+     * @param updatedBy the new value
+     */
+    public void setUpdatedBy(String updatedBy) {
+        this.updatedBy = updatedBy;
+    }
+
+    /**
+     * Gets updatedAt
+     *
+     * @return updatedAt
+     **/
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
+
+    /**
+     * Sets the value of updatedAt.
+     *
+     * @param updatedAt the new value
+     */
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
 }

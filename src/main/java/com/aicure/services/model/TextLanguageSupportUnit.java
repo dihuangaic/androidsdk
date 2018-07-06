@@ -28,6 +28,11 @@ public class TextLanguageSupportUnit {
     @com.google.gson.annotations.SerializedName("body")
     private String body = null;
     /**
+     * translation_key, provide translation key to a language service, you will get a dto contains a map of bodies [language : body]
+     */
+    @com.google.gson.annotations.SerializedName("translation_key")
+    private String translationKey = null;
+    /**
      * params for translation injections if necessary, like &#39;my name is {%name}, and i am {%age} years old.&#39;
      */
     @com.google.gson.annotations.SerializedName("params")
@@ -37,11 +42,6 @@ public class TextLanguageSupportUnit {
      */
     @com.google.gson.annotations.SerializedName("description")
     private String description = null;
-    /**
-     * translation_key, provide translation key to a language service, you will get a dto contains a map of bodies [language : body]
-     */
-    @com.google.gson.annotations.SerializedName("translation_key")
-    private String translationKey = null;
 
     /**
      * body, english version text
@@ -59,6 +59,24 @@ public class TextLanguageSupportUnit {
      */
     public void setBody(String body) {
         this.body = body;
+    }
+
+    /**
+     * translation_key, provide translation key to a language service, you will get a dto contains a map of bodies [language : body]
+     *
+     * @return translationKey
+     **/
+    public String getTranslationKey() {
+        return translationKey;
+    }
+
+    /**
+     * Sets the value of translationKey.
+     *
+     * @param translationKey the new value
+     */
+    public void setTranslationKey(String translationKey) {
+        this.translationKey = translationKey;
     }
 
     /**
@@ -95,24 +113,6 @@ public class TextLanguageSupportUnit {
      */
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    /**
-     * translation_key, provide translation key to a language service, you will get a dto contains a map of bodies [language : body]
-     *
-     * @return translationKey
-     **/
-    public String getTranslationKey() {
-        return translationKey;
-    }
-
-    /**
-     * Sets the value of translationKey.
-     *
-     * @param translationKey the new value
-     */
-    public void setTranslationKey(String translationKey) {
-        this.translationKey = translationKey;
     }
 
 }

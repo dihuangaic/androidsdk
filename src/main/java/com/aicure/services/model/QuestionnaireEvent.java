@@ -35,6 +35,8 @@ public class QuestionnaireEvent {
     private String scheduleId = null;
     @com.google.gson.annotations.SerializedName("dose_id")
     private String doseId = null;
+    @com.google.gson.annotations.SerializedName("language")
+    private String language = null;
     @com.google.gson.annotations.SerializedName("action_type")
     private String actionType = null;
     @com.google.gson.annotations.SerializedName("tags")
@@ -178,6 +180,24 @@ public class QuestionnaireEvent {
      */
     public void setDoseId(String doseId) {
         this.doseId = doseId;
+    }
+
+    /**
+     * Gets language
+     *
+     * @return language
+     **/
+    public String getLanguage() {
+        return language;
+    }
+
+    /**
+     * Sets the value of language.
+     *
+     * @param language the new value
+     */
+    public void setLanguage(String language) {
+        this.language = language;
     }
 
     /**

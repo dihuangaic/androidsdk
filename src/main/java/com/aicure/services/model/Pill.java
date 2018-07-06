@@ -21,6 +21,11 @@ package com.aicure.services.model;
  **/
 public class Pill {
     /**
+     * ID of medication
+     */
+    @com.google.gson.annotations.SerializedName("medication_id")
+    private String medicationId = null;
+    /**
      * The # of the pill for this medication indicated by medication_id
      */
     @com.google.gson.annotations.SerializedName("pill_id")
@@ -30,11 +35,24 @@ public class Pill {
      */
     @com.google.gson.annotations.SerializedName("description")
     private String description = null;
+
     /**
      * ID of medication
+     *
+     * @return medicationId
+     **/
+    public String getMedicationId() {
+        return medicationId;
+    }
+
+    /**
+     * Sets the value of medicationId.
+     *
+     * @param medicationId the new value
      */
-    @com.google.gson.annotations.SerializedName("medication_id")
-    private String medicationId = null;
+    public void setMedicationId(String medicationId) {
+        this.medicationId = medicationId;
+    }
 
     /**
      * The # of the pill for this medication indicated by medication_id
@@ -70,24 +88,6 @@ public class Pill {
      */
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    /**
-     * ID of medication
-     *
-     * @return medicationId
-     **/
-    public String getMedicationId() {
-        return medicationId;
-    }
-
-    /**
-     * Sets the value of medicationId.
-     *
-     * @param medicationId the new value
-     */
-    public void setMedicationId(String medicationId) {
-        this.medicationId = medicationId;
     }
 
 }

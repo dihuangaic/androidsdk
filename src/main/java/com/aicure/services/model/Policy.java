@@ -21,11 +21,6 @@ package com.aicure.services.model;
  **/
 public class Policy {
     /**
-     * phi
-     */
-    @com.google.gson.annotations.SerializedName("phi")
-    private String phi = null;
-    /**
      * region
      */
     @com.google.gson.annotations.SerializedName("region")
@@ -40,24 +35,11 @@ public class Policy {
      */
     @com.google.gson.annotations.SerializedName("ownership")
     private String ownership = null;
-
     /**
      * phi
-     *
-     * @return phi
-     **/
-    public String getPhi() {
-        return phi;
-    }
-
-    /**
-     * Sets the value of phi.
-     *
-     * @param phi the new value
      */
-    public void setPhi(String phi) {
-        this.phi = phi;
-    }
+    @com.google.gson.annotations.SerializedName("phi")
+    private String phi = null;
 
     /**
      * region
@@ -111,6 +93,24 @@ public class Policy {
      */
     public void setOwnership(String ownership) {
         this.ownership = ownership;
+    }
+
+    /**
+     * phi
+     *
+     * @return phi
+     **/
+    public String getPhi() {
+        return phi;
+    }
+
+    /**
+     * Sets the value of phi.
+     *
+     * @param phi the new value
+     */
+    public void setPhi(String phi) {
+        this.phi = phi;
     }
 
 }

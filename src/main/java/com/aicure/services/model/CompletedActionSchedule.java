@@ -19,13 +19,13 @@ package com.aicure.services.model;
 public class CompletedActionSchedule {
     @com.google.gson.annotations.SerializedName("schedule_window_start")
     private String scheduleWindowStart = null;
+    @com.google.gson.annotations.SerializedName("schedule_window_end")
+    private String scheduleWindowEnd = null;
     /**
      * whether or not the patient completed the action schedule
      */
     @com.google.gson.annotations.SerializedName("completed")
     private Boolean completed = null;
-    @com.google.gson.annotations.SerializedName("schedule_window_end")
-    private String scheduleWindowEnd = null;
 
     /**
      * Gets scheduleWindowStart
@@ -46,24 +46,6 @@ public class CompletedActionSchedule {
     }
 
     /**
-     * whether or not the patient completed the action schedule
-     *
-     * @return completed
-     **/
-    public Boolean getCompleted() {
-        return completed;
-    }
-
-    /**
-     * Sets the value of completed.
-     *
-     * @param completed the new value
-     */
-    public void setCompleted(Boolean completed) {
-        this.completed = completed;
-    }
-
-    /**
      * Gets scheduleWindowEnd
      *
      * @return scheduleWindowEnd
@@ -79,6 +61,24 @@ public class CompletedActionSchedule {
      */
     public void setScheduleWindowEnd(String scheduleWindowEnd) {
         this.scheduleWindowEnd = scheduleWindowEnd;
+    }
+
+    /**
+     * whether or not the patient completed the action schedule
+     *
+     * @return completed
+     **/
+    public Boolean getCompleted() {
+        return completed;
+    }
+
+    /**
+     * Sets the value of completed.
+     *
+     * @param completed the new value
+     */
+    public void setCompleted(Boolean completed) {
+        this.completed = completed;
     }
 
 }

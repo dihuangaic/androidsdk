@@ -23,11 +23,6 @@ import java.util.*;
  **/
 public class MedicationAlgorithm {
     /**
-     * Serialized object or any notes
-     */
-    @com.google.gson.annotations.SerializedName("description")
-    private String description = null;
-    /**
      * ID of medication
      */
     @com.google.gson.annotations.SerializedName("medication_id")
@@ -38,6 +33,16 @@ public class MedicationAlgorithm {
     @com.google.gson.annotations.SerializedName("models")
     private List<AlgorithmModel> models = null;
     /**
+     * Serialized object or any notes
+     */
+    @com.google.gson.annotations.SerializedName("description")
+    private String description = null;
+    /**
+     * Serialized object or any notes
+     */
+    @com.google.gson.annotations.SerializedName("tag")
+    private String tag = null;
+    /**
      * yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
      */
     @com.google.gson.annotations.SerializedName("created_at")
@@ -47,29 +52,6 @@ public class MedicationAlgorithm {
      */
     @com.google.gson.annotations.SerializedName("updated_at")
     private String updatedAt = null;
-    /**
-     * Serialized object or any notes
-     */
-    @com.google.gson.annotations.SerializedName("tag")
-    private String tag = null;
-
-    /**
-     * Serialized object or any notes
-     *
-     * @return description
-     **/
-    public String getDescription() {
-        return description;
-    }
-
-    /**
-     * Sets the value of description.
-     *
-     * @param description the new value
-     */
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     /**
      * ID of medication
@@ -108,6 +90,42 @@ public class MedicationAlgorithm {
     }
 
     /**
+     * Serialized object or any notes
+     *
+     * @return description
+     **/
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * Sets the value of description.
+     *
+     * @param description the new value
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * Serialized object or any notes
+     *
+     * @return tag
+     **/
+    public String getTag() {
+        return tag;
+    }
+
+    /**
+     * Sets the value of tag.
+     *
+     * @param tag the new value
+     */
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    /**
      * yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
      *
      * @return createdAt
@@ -141,24 +159,6 @@ public class MedicationAlgorithm {
      */
     public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
-    }
-
-    /**
-     * Serialized object or any notes
-     *
-     * @return tag
-     **/
-    public String getTag() {
-        return tag;
-    }
-
-    /**
-     * Sets the value of tag.
-     *
-     * @param tag the new value
-     */
-    public void setTag(String tag) {
-        this.tag = tag;
     }
 
 }

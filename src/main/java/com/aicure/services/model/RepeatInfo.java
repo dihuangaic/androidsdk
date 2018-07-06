@@ -21,16 +21,6 @@ package com.aicure.services.model;
  **/
 public class RepeatInfo {
     /**
-     * description
-     */
-    @com.google.gson.annotations.SerializedName("description")
-    private String description = null;
-    /**
-     * max_repeats, null means unlimited
-     */
-    @com.google.gson.annotations.SerializedName("max_repeats")
-    private Integer maxRepeats = null;
-    /**
      * allow_repeat_out_time_window
      */
     @com.google.gson.annotations.SerializedName("allow_repeat_out_time_window")
@@ -40,42 +30,16 @@ public class RepeatInfo {
      */
     @com.google.gson.annotations.SerializedName("seconds_before_next_repeat")
     private Integer secondsBeforeNextRepeat = null;
-
-    /**
-     * description
-     *
-     * @return description
-     **/
-    public String getDescription() {
-        return description;
-    }
-
-    /**
-     * Sets the value of description.
-     *
-     * @param description the new value
-     */
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     /**
      * max_repeats, null means unlimited
-     *
-     * @return maxRepeats
-     **/
-    public Integer getMaxRepeats() {
-        return maxRepeats;
-    }
-
-    /**
-     * Sets the value of maxRepeats.
-     *
-     * @param maxRepeats the new value
      */
-    public void setMaxRepeats(Integer maxRepeats) {
-        this.maxRepeats = maxRepeats;
-    }
+    @com.google.gson.annotations.SerializedName("max_repeats")
+    private Integer maxRepeats = null;
+    /**
+     * description
+     */
+    @com.google.gson.annotations.SerializedName("description")
+    private String description = null;
 
     /**
      * allow_repeat_out_time_window
@@ -111,6 +75,42 @@ public class RepeatInfo {
      */
     public void setSecondsBeforeNextRepeat(Integer secondsBeforeNextRepeat) {
         this.secondsBeforeNextRepeat = secondsBeforeNextRepeat;
+    }
+
+    /**
+     * max_repeats, null means unlimited
+     *
+     * @return maxRepeats
+     **/
+    public Integer getMaxRepeats() {
+        return maxRepeats;
+    }
+
+    /**
+     * Sets the value of maxRepeats.
+     *
+     * @param maxRepeats the new value
+     */
+    public void setMaxRepeats(Integer maxRepeats) {
+        this.maxRepeats = maxRepeats;
+    }
+
+    /**
+     * description
+     *
+     * @return description
+     **/
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * Sets the value of description.
+     *
+     * @param description the new value
+     */
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }

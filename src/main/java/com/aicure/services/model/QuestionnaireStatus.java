@@ -19,28 +19,10 @@ import java.util.*;
 import com.aicure.services.model.QuestionnaireStatusEntry;
 
 public class QuestionnaireStatus {
-    @com.google.gson.annotations.SerializedName("status_type")
-    private String statusType = null;
     @com.google.gson.annotations.SerializedName("entries")
     private List<QuestionnaireStatusEntry> entries = null;
-
-    /**
-     * Gets statusType
-     *
-     * @return statusType
-     **/
-    public String getStatusType() {
-        return statusType;
-    }
-
-    /**
-     * Sets the value of statusType.
-     *
-     * @param statusType the new value
-     */
-    public void setStatusType(String statusType) {
-        this.statusType = statusType;
-    }
+    @com.google.gson.annotations.SerializedName("status_type")
+    private String statusType = null;
 
     /**
      * Gets entries
@@ -58,6 +40,24 @@ public class QuestionnaireStatus {
      */
     public void setEntries(List<QuestionnaireStatusEntry> entries) {
         this.entries = entries;
+    }
+
+    /**
+     * Gets statusType
+     *
+     * @return statusType
+     **/
+    public String getStatusType() {
+        return statusType;
+    }
+
+    /**
+     * Sets the value of statusType.
+     *
+     * @param statusType the new value
+     */
+    public void setStatusType(String statusType) {
+        this.statusType = statusType;
     }
 
 }

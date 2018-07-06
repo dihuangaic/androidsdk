@@ -21,6 +21,11 @@ package com.aicure.services.model;
  **/
 public class AnswerDisplay {
     /**
+     * answer display type
+     */
+    @com.google.gson.annotations.SerializedName("type")
+    private String type = null;
+    /**
      * count of same type of displays
      */
     @com.google.gson.annotations.SerializedName("count")
@@ -31,11 +36,6 @@ public class AnswerDisplay {
     @com.google.gson.annotations.SerializedName("mandatory")
     private Boolean mandatory = null;
     /**
-     * answer display type
-     */
-    @com.google.gson.annotations.SerializedName("type")
-    private String type = null;
-    /**
      * description
      */
     @com.google.gson.annotations.SerializedName("description")
@@ -45,6 +45,24 @@ public class AnswerDisplay {
      */
     @com.google.gson.annotations.SerializedName("primary")
     private Boolean primary = null;
+
+    /**
+     * answer display type
+     *
+     * @return type
+     **/
+    public String getType() {
+        return type;
+    }
+
+    /**
+     * Sets the value of type.
+     *
+     * @param type the new value
+     */
+    public void setType(String type) {
+        this.type = type;
+    }
 
     /**
      * count of same type of displays
@@ -80,24 +98,6 @@ public class AnswerDisplay {
      */
     public void setMandatory(Boolean mandatory) {
         this.mandatory = mandatory;
-    }
-
-    /**
-     * answer display type
-     *
-     * @return type
-     **/
-    public String getType() {
-        return type;
-    }
-
-    /**
-     * Sets the value of type.
-     *
-     * @param type the new value
-     */
-    public void setType(String type) {
-        this.type = type;
     }
 
     /**

@@ -21,15 +21,15 @@ package com.aicure.services.model;
  **/
 public class AlgorithmModel {
     /**
-     * Priority, 0 is the highest priority
-     */
-    @com.google.gson.annotations.SerializedName("priority")
-    private Integer priority = null;
-    /**
      * Id of algorithm model
      */
     @com.google.gson.annotations.SerializedName("algorithm_model_id")
     private String algorithmModelId = null;
+    /**
+     * Priority, 0 is the highest priority
+     */
+    @com.google.gson.annotations.SerializedName("priority")
+    private Integer priority = null;
     /**
      * Location of algorithm model
      */
@@ -40,24 +40,6 @@ public class AlgorithmModel {
      */
     @com.google.gson.annotations.SerializedName("description")
     private String description = null;
-
-    /**
-     * Priority, 0 is the highest priority
-     *
-     * @return priority
-     **/
-    public Integer getPriority() {
-        return priority;
-    }
-
-    /**
-     * Sets the value of priority.
-     *
-     * @param priority the new value
-     */
-    public void setPriority(Integer priority) {
-        this.priority = priority;
-    }
 
     /**
      * Id of algorithm model
@@ -75,6 +57,24 @@ public class AlgorithmModel {
      */
     public void setAlgorithmModelId(String algorithmModelId) {
         this.algorithmModelId = algorithmModelId;
+    }
+
+    /**
+     * Priority, 0 is the highest priority
+     *
+     * @return priority
+     **/
+    public Integer getPriority() {
+        return priority;
+    }
+
+    /**
+     * Sets the value of priority.
+     *
+     * @param priority the new value
+     */
+    public void setPriority(Integer priority) {
+        this.priority = priority;
     }
 
     /**

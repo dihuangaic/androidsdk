@@ -24,11 +24,6 @@ import com.aicure.services.model.StepAction;
  **/
 public class PillGroup {
     /**
-     * A sequence of step actions
-     */
-    @com.google.gson.annotations.SerializedName("action_sequence")
-    private List<StepAction> actionSequence = null;
-    /**
      * A couple of pills in this pill group which follow one specific sequence of steps
      */
     @com.google.gson.annotations.SerializedName("pills")
@@ -38,24 +33,11 @@ public class PillGroup {
      */
     @com.google.gson.annotations.SerializedName("description")
     private String description = null;
-
     /**
      * A sequence of step actions
-     *
-     * @return actionSequence
-     **/
-    public List<StepAction> getActionSequence() {
-        return actionSequence;
-    }
-
-    /**
-     * Sets the value of actionSequence.
-     *
-     * @param actionSequence the new value
      */
-    public void setActionSequence(List<StepAction> actionSequence) {
-        this.actionSequence = actionSequence;
-    }
+    @com.google.gson.annotations.SerializedName("action_sequence")
+    private List<StepAction> actionSequence = null;
 
     /**
      * A couple of pills in this pill group which follow one specific sequence of steps
@@ -91,6 +73,24 @@ public class PillGroup {
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * A sequence of step actions
+     *
+     * @return actionSequence
+     **/
+    public List<StepAction> getActionSequence() {
+        return actionSequence;
+    }
+
+    /**
+     * Sets the value of actionSequence.
+     *
+     * @param actionSequence the new value
+     */
+    public void setActionSequence(List<StepAction> actionSequence) {
+        this.actionSequence = actionSequence;
     }
 
 }

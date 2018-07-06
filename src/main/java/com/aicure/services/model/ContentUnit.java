@@ -24,38 +24,20 @@ import com.aicure.services.model.TextLanguageSupportUnit;
  **/
 public class ContentUnit {
     /**
-     * files, check FileLanguageSupportUnit
-     */
-    @com.google.gson.annotations.SerializedName("files")
-    private List<FileLanguageSupportUnit> files = null;
-    /**
      * text, check TextLanguageSupportUnit
      */
     @com.google.gson.annotations.SerializedName("text")
     private TextLanguageSupportUnit text = null;
     /**
+     * files, check FileLanguageSupportUnit
+     */
+    @com.google.gson.annotations.SerializedName("files")
+    private List<FileLanguageSupportUnit> files = null;
+    /**
      * description
      */
     @com.google.gson.annotations.SerializedName("description")
     private String description = null;
-
-    /**
-     * files, check FileLanguageSupportUnit
-     *
-     * @return files
-     **/
-    public List<FileLanguageSupportUnit> getFiles() {
-        return files;
-    }
-
-    /**
-     * Sets the value of files.
-     *
-     * @param files the new value
-     */
-    public void setFiles(List<FileLanguageSupportUnit> files) {
-        this.files = files;
-    }
 
     /**
      * text, check TextLanguageSupportUnit
@@ -73,6 +55,24 @@ public class ContentUnit {
      */
     public void setText(TextLanguageSupportUnit text) {
         this.text = text;
+    }
+
+    /**
+     * files, check FileLanguageSupportUnit
+     *
+     * @return files
+     **/
+    public List<FileLanguageSupportUnit> getFiles() {
+        return files;
+    }
+
+    /**
+     * Sets the value of files.
+     *
+     * @param files the new value
+     */
+    public void setFiles(List<FileLanguageSupportUnit> files) {
+        this.files = files;
     }
 
     /**

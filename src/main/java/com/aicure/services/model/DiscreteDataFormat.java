@@ -23,38 +23,20 @@ import java.util.*;
  **/
 public class DiscreteDataFormat {
     /**
-     * discrete_value_descriptions
-     */
-    @com.google.gson.annotations.SerializedName("discrete_value_descriptions")
-    private List<ContentUnit> discreteValueDescriptions = null;
-    /**
      * discrete_values
      */
     @com.google.gson.annotations.SerializedName("discrete_values")
     private List<Double> discreteValues = null;
     /**
+     * discrete_value_descriptions
+     */
+    @com.google.gson.annotations.SerializedName("discrete_value_descriptions")
+    private List<ContentUnit> discreteValueDescriptions = null;
+    /**
      * description
      */
     @com.google.gson.annotations.SerializedName("description")
     private String description = null;
-
-    /**
-     * discrete_value_descriptions
-     *
-     * @return discreteValueDescriptions
-     **/
-    public List<ContentUnit> getDiscreteValueDescriptions() {
-        return discreteValueDescriptions;
-    }
-
-    /**
-     * Sets the value of discreteValueDescriptions.
-     *
-     * @param discreteValueDescriptions the new value
-     */
-    public void setDiscreteValueDescriptions(List<ContentUnit> discreteValueDescriptions) {
-        this.discreteValueDescriptions = discreteValueDescriptions;
-    }
 
     /**
      * discrete_values
@@ -72,6 +54,24 @@ public class DiscreteDataFormat {
      */
     public void setDiscreteValues(List<Double> discreteValues) {
         this.discreteValues = discreteValues;
+    }
+
+    /**
+     * discrete_value_descriptions
+     *
+     * @return discreteValueDescriptions
+     **/
+    public List<ContentUnit> getDiscreteValueDescriptions() {
+        return discreteValueDescriptions;
+    }
+
+    /**
+     * Sets the value of discreteValueDescriptions.
+     *
+     * @param discreteValueDescriptions the new value
+     */
+    public void setDiscreteValueDescriptions(List<ContentUnit> discreteValueDescriptions) {
+        this.discreteValueDescriptions = discreteValueDescriptions;
     }
 
     /**

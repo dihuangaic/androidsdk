@@ -22,70 +22,34 @@ import com.aicure.services.model.RepeatInfo;
  **/
 public class FreeAnswer {
     /**
-     * description
-     */
-    @com.google.gson.annotations.SerializedName("description")
-    private String description = null;
-    @com.google.gson.annotations.SerializedName("aiqsnum")
-    private String aiqsnum = null;
-    /**
      * next_question_id_answered, if null no next question after answer this one, questionnaire ends here
      */
     @com.google.gson.annotations.SerializedName("next_question_id_answered")
     private String nextQuestionIdAnswered = null;
+    /**
+     * next_question_id_not_answered, if null means no next question if choose not to answer this question, questionnaire ends here
+     */
+    @com.google.gson.annotations.SerializedName("next_question_id_not_answered")
+    private String nextQuestionIdNotAnswered = null;
+    /**
+     * description
+     */
+    @com.google.gson.annotations.SerializedName("description")
+    private String description = null;
     /**
      * repeat if not answered
      */
     @com.google.gson.annotations.SerializedName("repeat_not_answered")
     private RepeatInfo repeatNotAnswered = null;
     /**
-     * next_question_id_not_answered, if null means no next question if choose not to answer this question, questionnaire ends here
-     */
-    @com.google.gson.annotations.SerializedName("next_question_id_not_answered")
-    private String nextQuestionIdNotAnswered = null;
-    @com.google.gson.annotations.SerializedName("aiqscres")
-    private String aiqscres = null;
-    /**
      * action_if_not_answered
      */
     @com.google.gson.annotations.SerializedName("action_if_not_answered")
     private String actionIfNotAnswered = null;
-
-    /**
-     * description
-     *
-     * @return description
-     **/
-    public String getDescription() {
-        return description;
-    }
-
-    /**
-     * Sets the value of description.
-     *
-     * @param description the new value
-     */
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * Gets aiqsnum
-     *
-     * @return aiqsnum
-     **/
-    public String getAiqsnum() {
-        return aiqsnum;
-    }
-
-    /**
-     * Sets the value of aiqsnum.
-     *
-     * @param aiqsnum the new value
-     */
-    public void setAiqsnum(String aiqsnum) {
-        this.aiqsnum = aiqsnum;
-    }
+    @com.google.gson.annotations.SerializedName("aiqscres")
+    private String aiqscres = null;
+    @com.google.gson.annotations.SerializedName("aiqsnum")
+    private String aiqsnum = null;
 
     /**
      * next_question_id_answered, if null no next question after answer this one, questionnaire ends here
@@ -103,24 +67,6 @@ public class FreeAnswer {
      */
     public void setNextQuestionIdAnswered(String nextQuestionIdAnswered) {
         this.nextQuestionIdAnswered = nextQuestionIdAnswered;
-    }
-
-    /**
-     * repeat if not answered
-     *
-     * @return repeatNotAnswered
-     **/
-    public RepeatInfo getRepeatNotAnswered() {
-        return repeatNotAnswered;
-    }
-
-    /**
-     * Sets the value of repeatNotAnswered.
-     *
-     * @param repeatNotAnswered the new value
-     */
-    public void setRepeatNotAnswered(RepeatInfo repeatNotAnswered) {
-        this.repeatNotAnswered = repeatNotAnswered;
     }
 
     /**
@@ -142,21 +88,39 @@ public class FreeAnswer {
     }
 
     /**
-     * Gets aiqscres
+     * description
      *
-     * @return aiqscres
+     * @return description
      **/
-    public String getAiqscres() {
-        return aiqscres;
+    public String getDescription() {
+        return description;
     }
 
     /**
-     * Sets the value of aiqscres.
+     * Sets the value of description.
      *
-     * @param aiqscres the new value
+     * @param description the new value
      */
-    public void setAiqscres(String aiqscres) {
-        this.aiqscres = aiqscres;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * repeat if not answered
+     *
+     * @return repeatNotAnswered
+     **/
+    public RepeatInfo getRepeatNotAnswered() {
+        return repeatNotAnswered;
+    }
+
+    /**
+     * Sets the value of repeatNotAnswered.
+     *
+     * @param repeatNotAnswered the new value
+     */
+    public void setRepeatNotAnswered(RepeatInfo repeatNotAnswered) {
+        this.repeatNotAnswered = repeatNotAnswered;
     }
 
     /**
@@ -175,6 +139,42 @@ public class FreeAnswer {
      */
     public void setActionIfNotAnswered(String actionIfNotAnswered) {
         this.actionIfNotAnswered = actionIfNotAnswered;
+    }
+
+    /**
+     * Gets aiqscres
+     *
+     * @return aiqscres
+     **/
+    public String getAiqscres() {
+        return aiqscres;
+    }
+
+    /**
+     * Sets the value of aiqscres.
+     *
+     * @param aiqscres the new value
+     */
+    public void setAiqscres(String aiqscres) {
+        this.aiqscres = aiqscres;
+    }
+
+    /**
+     * Gets aiqsnum
+     *
+     * @return aiqsnum
+     **/
+    public String getAiqsnum() {
+        return aiqsnum;
+    }
+
+    /**
+     * Sets the value of aiqsnum.
+     *
+     * @param aiqsnum the new value
+     */
+    public void setAiqsnum(String aiqsnum) {
+        this.aiqsnum = aiqsnum;
     }
 
 }

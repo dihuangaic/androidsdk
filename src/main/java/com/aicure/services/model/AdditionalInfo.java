@@ -26,25 +26,25 @@ public class AdditionalInfo {
     @com.google.gson.annotations.SerializedName("additional_text")
     private Boolean additionalText = null;
     /**
+     * additional_video flag
+     */
+    @com.google.gson.annotations.SerializedName("additional_video")
+    private Boolean additionalVideo = null;
+    /**
      * additional_audio flag
      */
     @com.google.gson.annotations.SerializedName("additional_audio")
     private Boolean additionalAudio = null;
-    /**
-     * description
-     */
-    @com.google.gson.annotations.SerializedName("description")
-    private String description = null;
     /**
      * additional_image flag
      */
     @com.google.gson.annotations.SerializedName("additional_image")
     private Boolean additionalImage = null;
     /**
-     * additional_video flag
+     * description
      */
-    @com.google.gson.annotations.SerializedName("additional_video")
-    private Boolean additionalVideo = null;
+    @com.google.gson.annotations.SerializedName("description")
+    private String description = null;
 
     /**
      * additional_text flag
@@ -62,6 +62,24 @@ public class AdditionalInfo {
      */
     public void setAdditionalText(Boolean additionalText) {
         this.additionalText = additionalText;
+    }
+
+    /**
+     * additional_video flag
+     *
+     * @return additionalVideo
+     **/
+    public Boolean getAdditionalVideo() {
+        return additionalVideo;
+    }
+
+    /**
+     * Sets the value of additionalVideo.
+     *
+     * @param additionalVideo the new value
+     */
+    public void setAdditionalVideo(Boolean additionalVideo) {
+        this.additionalVideo = additionalVideo;
     }
 
     /**
@@ -83,24 +101,6 @@ public class AdditionalInfo {
     }
 
     /**
-     * description
-     *
-     * @return description
-     **/
-    public String getDescription() {
-        return description;
-    }
-
-    /**
-     * Sets the value of description.
-     *
-     * @param description the new value
-     */
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
      * additional_image flag
      *
      * @return additionalImage
@@ -119,21 +119,21 @@ public class AdditionalInfo {
     }
 
     /**
-     * additional_video flag
+     * description
      *
-     * @return additionalVideo
+     * @return description
      **/
-    public Boolean getAdditionalVideo() {
-        return additionalVideo;
+    public String getDescription() {
+        return description;
     }
 
     /**
-     * Sets the value of additionalVideo.
+     * Sets the value of description.
      *
-     * @param additionalVideo the new value
+     * @param description the new value
      */
-    public void setAdditionalVideo(Boolean additionalVideo) {
-        this.additionalVideo = additionalVideo;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }

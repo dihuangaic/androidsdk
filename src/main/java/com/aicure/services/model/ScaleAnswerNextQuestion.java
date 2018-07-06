@@ -22,38 +22,20 @@ import com.aicure.services.model.ScaleAnswerCondition;
  **/
 public class ScaleAnswerNextQuestion {
     /**
-     * next question if satisfy condition
-     */
-    @com.google.gson.annotations.SerializedName("next_question_id")
-    private String nextQuestionId = null;
-    /**
      * condition of next question, check ScaleAnswerCondition
      */
     @com.google.gson.annotations.SerializedName("condition")
     private ScaleAnswerCondition condition = null;
     /**
+     * next question if satisfy condition
+     */
+    @com.google.gson.annotations.SerializedName("next_question_id")
+    private String nextQuestionId = null;
+    /**
      * description
      */
     @com.google.gson.annotations.SerializedName("description")
     private String description = null;
-
-    /**
-     * next question if satisfy condition
-     *
-     * @return nextQuestionId
-     **/
-    public String getNextQuestionId() {
-        return nextQuestionId;
-    }
-
-    /**
-     * Sets the value of nextQuestionId.
-     *
-     * @param nextQuestionId the new value
-     */
-    public void setNextQuestionId(String nextQuestionId) {
-        this.nextQuestionId = nextQuestionId;
-    }
 
     /**
      * condition of next question, check ScaleAnswerCondition
@@ -71,6 +53,24 @@ public class ScaleAnswerNextQuestion {
      */
     public void setCondition(ScaleAnswerCondition condition) {
         this.condition = condition;
+    }
+
+    /**
+     * next question if satisfy condition
+     *
+     * @return nextQuestionId
+     **/
+    public String getNextQuestionId() {
+        return nextQuestionId;
+    }
+
+    /**
+     * Sets the value of nextQuestionId.
+     *
+     * @param nextQuestionId the new value
+     */
+    public void setNextQuestionId(String nextQuestionId) {
+        this.nextQuestionId = nextQuestionId;
     }
 
     /**

@@ -18,28 +18,10 @@ package com.aicure.services.model;
 import com.aicure.services.model.QuestionnaireStatusEntryValue;
 
 public class QuestionnaireStatusEntry {
-    @com.google.gson.annotations.SerializedName("value")
-    private QuestionnaireStatusEntryValue value = null;
     @com.google.gson.annotations.SerializedName("key")
     private String key = null;
-
-    /**
-     * Gets value
-     *
-     * @return value
-     **/
-    public QuestionnaireStatusEntryValue getValue() {
-        return value;
-    }
-
-    /**
-     * Sets the value of value.
-     *
-     * @param value the new value
-     */
-    public void setValue(QuestionnaireStatusEntryValue value) {
-        this.value = value;
-    }
+    @com.google.gson.annotations.SerializedName("value")
+    private QuestionnaireStatusEntryValue value = null;
 
     /**
      * Gets key
@@ -57,6 +39,24 @@ public class QuestionnaireStatusEntry {
      */
     public void setKey(String key) {
         this.key = key;
+    }
+
+    /**
+     * Gets value
+     *
+     * @return value
+     **/
+    public QuestionnaireStatusEntryValue getValue() {
+        return value;
+    }
+
+    /**
+     * Sets the value of value.
+     *
+     * @param value the new value
+     */
+    public void setValue(QuestionnaireStatusEntryValue value) {
+        this.value = value;
     }
 
 }

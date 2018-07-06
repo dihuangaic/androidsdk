@@ -23,61 +23,25 @@ import com.aicure.services.model.SingleQuestionnaireAction;
  **/
 public class QuestionnaireAction {
     /**
-     * if false, follow the order of questionnaire_ids, if true, use random order
-     */
-    @com.google.gson.annotations.SerializedName("enable_random_order")
-    private Boolean enableRandomOrder = null;
-    /**
-     * description
-     */
-    @com.google.gson.annotations.SerializedName("description")
-    private String description = null;
-    /**
      * A list of action for each single question
      */
     @com.google.gson.annotations.SerializedName("actions")
     private List<SingleQuestionnaireAction> actions = null;
     /**
+     * if false, follow the order of questionnaire_ids, if true, use random order
+     */
+    @com.google.gson.annotations.SerializedName("enable_random_order")
+    private Boolean enableRandomOrder = null;
+    /**
      * ad hoc flag
      */
     @com.google.gson.annotations.SerializedName("allow_random_action")
     private Boolean allowRandomAction = null;
-
-    /**
-     * if false, follow the order of questionnaire_ids, if true, use random order
-     *
-     * @return enableRandomOrder
-     **/
-    public Boolean getEnableRandomOrder() {
-        return enableRandomOrder;
-    }
-
-    /**
-     * Sets the value of enableRandomOrder.
-     *
-     * @param enableRandomOrder the new value
-     */
-    public void setEnableRandomOrder(Boolean enableRandomOrder) {
-        this.enableRandomOrder = enableRandomOrder;
-    }
-
     /**
      * description
-     *
-     * @return description
-     **/
-    public String getDescription() {
-        return description;
-    }
-
-    /**
-     * Sets the value of description.
-     *
-     * @param description the new value
      */
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    @com.google.gson.annotations.SerializedName("description")
+    private String description = null;
 
     /**
      * A list of action for each single question
@@ -98,6 +62,24 @@ public class QuestionnaireAction {
     }
 
     /**
+     * if false, follow the order of questionnaire_ids, if true, use random order
+     *
+     * @return enableRandomOrder
+     **/
+    public Boolean getEnableRandomOrder() {
+        return enableRandomOrder;
+    }
+
+    /**
+     * Sets the value of enableRandomOrder.
+     *
+     * @param enableRandomOrder the new value
+     */
+    public void setEnableRandomOrder(Boolean enableRandomOrder) {
+        this.enableRandomOrder = enableRandomOrder;
+    }
+
+    /**
      * ad hoc flag
      *
      * @return allowRandomAction
@@ -113,6 +95,24 @@ public class QuestionnaireAction {
      */
     public void setAllowRandomAction(Boolean allowRandomAction) {
         this.allowRandomAction = allowRandomAction;
+    }
+
+    /**
+     * description
+     *
+     * @return description
+     **/
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * Sets the value of description.
+     *
+     * @param description the new value
+     */
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }

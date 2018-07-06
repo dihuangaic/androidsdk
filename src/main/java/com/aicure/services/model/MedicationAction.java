@@ -23,47 +23,47 @@ import com.aicure.services.model.PillGroup;
  **/
 public class MedicationAction {
     /**
-     * if allow random action
+     * Number of Pills for this action
      */
-    @com.google.gson.annotations.SerializedName("allow_random_action")
-    private Boolean allowRandomAction = null;
+    @com.google.gson.annotations.SerializedName("size")
+    private Integer size = null;
     /**
      * a group of Pills which follow one specific sequence of steps
      */
     @com.google.gson.annotations.SerializedName("pill_groups")
     private List<PillGroup> pillGroups = null;
     /**
-     * Serialized object or any notes for random action
-     */
-    @com.google.gson.annotations.SerializedName("additional_serialized_random_action")
-    private String additionalSerializedRandomAction = null;
-    /**
      * Serialized object or any notes
      */
     @com.google.gson.annotations.SerializedName("description")
     private String description = null;
     /**
-     * Number of Pills for this action
+     * if allow random action
      */
-    @com.google.gson.annotations.SerializedName("size")
-    private Integer size = null;
+    @com.google.gson.annotations.SerializedName("allow_random_action")
+    private Boolean allowRandomAction = null;
+    /**
+     * Serialized object or any notes for random action
+     */
+    @com.google.gson.annotations.SerializedName("additional_serialized_random_action")
+    private String additionalSerializedRandomAction = null;
 
     /**
-     * if allow random action
+     * Number of Pills for this action
      *
-     * @return allowRandomAction
+     * @return size
      **/
-    public Boolean getAllowRandomAction() {
-        return allowRandomAction;
+    public Integer getSize() {
+        return size;
     }
 
     /**
-     * Sets the value of allowRandomAction.
+     * Sets the value of size.
      *
-     * @param allowRandomAction the new value
+     * @param size the new value
      */
-    public void setAllowRandomAction(Boolean allowRandomAction) {
-        this.allowRandomAction = allowRandomAction;
+    public void setSize(Integer size) {
+        this.size = size;
     }
 
     /**
@@ -85,24 +85,6 @@ public class MedicationAction {
     }
 
     /**
-     * Serialized object or any notes for random action
-     *
-     * @return additionalSerializedRandomAction
-     **/
-    public String getAdditionalSerializedRandomAction() {
-        return additionalSerializedRandomAction;
-    }
-
-    /**
-     * Sets the value of additionalSerializedRandomAction.
-     *
-     * @param additionalSerializedRandomAction the new value
-     */
-    public void setAdditionalSerializedRandomAction(String additionalSerializedRandomAction) {
-        this.additionalSerializedRandomAction = additionalSerializedRandomAction;
-    }
-
-    /**
      * Serialized object or any notes
      *
      * @return description
@@ -121,21 +103,39 @@ public class MedicationAction {
     }
 
     /**
-     * Number of Pills for this action
+     * if allow random action
      *
-     * @return size
+     * @return allowRandomAction
      **/
-    public Integer getSize() {
-        return size;
+    public Boolean getAllowRandomAction() {
+        return allowRandomAction;
     }
 
     /**
-     * Sets the value of size.
+     * Sets the value of allowRandomAction.
      *
-     * @param size the new value
+     * @param allowRandomAction the new value
      */
-    public void setSize(Integer size) {
-        this.size = size;
+    public void setAllowRandomAction(Boolean allowRandomAction) {
+        this.allowRandomAction = allowRandomAction;
+    }
+
+    /**
+     * Serialized object or any notes for random action
+     *
+     * @return additionalSerializedRandomAction
+     **/
+    public String getAdditionalSerializedRandomAction() {
+        return additionalSerializedRandomAction;
+    }
+
+    /**
+     * Sets the value of additionalSerializedRandomAction.
+     *
+     * @param additionalSerializedRandomAction the new value
+     */
+    public void setAdditionalSerializedRandomAction(String additionalSerializedRandomAction) {
+        this.additionalSerializedRandomAction = additionalSerializedRandomAction;
     }
 
 }

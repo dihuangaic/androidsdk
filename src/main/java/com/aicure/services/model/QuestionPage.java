@@ -24,21 +24,6 @@ import com.aicure.services.model.TextLanguageSupportUnit;
  **/
 public class QuestionPage {
     /**
-     * question_ids in this page
-     */
-    @com.google.gson.annotations.SerializedName("question_ids")
-    private List<String> questionIds = null;
-    /**
-     * title_description
-     */
-    @com.google.gson.annotations.SerializedName("title_description")
-    private ContentUnit titleDescription = null;
-    /**
-     * description
-     */
-    @com.google.gson.annotations.SerializedName("description")
-    private String description = null;
-    /**
      * title
      */
     @com.google.gson.annotations.SerializedName("title")
@@ -49,64 +34,25 @@ public class QuestionPage {
     @com.google.gson.annotations.SerializedName("notes")
     private List<TextLanguageSupportUnit> notes = null;
     /**
+     * question_ids in this page
+     */
+    @com.google.gson.annotations.SerializedName("question_ids")
+    private List<String> questionIds = null;
+    /**
+     * description
+     */
+    @com.google.gson.annotations.SerializedName("description")
+    private String description = null;
+    /**
      * start question id
      */
     @com.google.gson.annotations.SerializedName("start_question_id")
     private String startQuestionId = null;
-
-    /**
-     * question_ids in this page
-     *
-     * @return questionIds
-     **/
-    public List<String> getQuestionIds() {
-        return questionIds;
-    }
-
-    /**
-     * Sets the value of questionIds.
-     *
-     * @param questionIds the new value
-     */
-    public void setQuestionIds(List<String> questionIds) {
-        this.questionIds = questionIds;
-    }
-
     /**
      * title_description
-     *
-     * @return titleDescription
-     **/
-    public ContentUnit getTitleDescription() {
-        return titleDescription;
-    }
-
-    /**
-     * Sets the value of titleDescription.
-     *
-     * @param titleDescription the new value
      */
-    public void setTitleDescription(ContentUnit titleDescription) {
-        this.titleDescription = titleDescription;
-    }
-
-    /**
-     * description
-     *
-     * @return description
-     **/
-    public String getDescription() {
-        return description;
-    }
-
-    /**
-     * Sets the value of description.
-     *
-     * @param description the new value
-     */
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    @com.google.gson.annotations.SerializedName("title_description")
+    private ContentUnit titleDescription = null;
 
     /**
      * title
@@ -145,6 +91,42 @@ public class QuestionPage {
     }
 
     /**
+     * question_ids in this page
+     *
+     * @return questionIds
+     **/
+    public List<String> getQuestionIds() {
+        return questionIds;
+    }
+
+    /**
+     * Sets the value of questionIds.
+     *
+     * @param questionIds the new value
+     */
+    public void setQuestionIds(List<String> questionIds) {
+        this.questionIds = questionIds;
+    }
+
+    /**
+     * description
+     *
+     * @return description
+     **/
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * Sets the value of description.
+     *
+     * @param description the new value
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
      * start question id
      *
      * @return startQuestionId
@@ -160,6 +142,24 @@ public class QuestionPage {
      */
     public void setStartQuestionId(String startQuestionId) {
         this.startQuestionId = startQuestionId;
+    }
+
+    /**
+     * title_description
+     *
+     * @return titleDescription
+     **/
+    public ContentUnit getTitleDescription() {
+        return titleDescription;
+    }
+
+    /**
+     * Sets the value of titleDescription.
+     *
+     * @param titleDescription the new value
+     */
+    public void setTitleDescription(ContentUnit titleDescription) {
+        this.titleDescription = titleDescription;
     }
 
 }

@@ -22,11 +22,6 @@ import com.aicure.services.model.ScaleAnswerCondition;
  **/
 public class ScaleAnswerTriggerAction {
     /**
-     * description
-     */
-    @com.google.gson.annotations.SerializedName("description")
-    private String description = null;
-    /**
      * condition of post action, check ScaleAnswerCondition
      */
     @com.google.gson.annotations.SerializedName("condition")
@@ -36,24 +31,11 @@ public class ScaleAnswerTriggerAction {
      */
     @com.google.gson.annotations.SerializedName("trigger_action_type")
     private String triggerActionType = null;
-
     /**
      * description
-     *
-     * @return description
-     **/
-    public String getDescription() {
-        return description;
-    }
-
-    /**
-     * Sets the value of description.
-     *
-     * @param description the new value
      */
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    @com.google.gson.annotations.SerializedName("description")
+    private String description = null;
 
     /**
      * condition of post action, check ScaleAnswerCondition
@@ -89,6 +71,24 @@ public class ScaleAnswerTriggerAction {
      */
     public void setTriggerActionType(String triggerActionType) {
         this.triggerActionType = triggerActionType;
+    }
+
+    /**
+     * description
+     *
+     * @return description
+     **/
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * Sets the value of description.
+     *
+     * @param description the new value
+     */
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }

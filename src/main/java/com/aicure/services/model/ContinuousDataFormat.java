@@ -28,15 +28,15 @@ public class ContinuousDataFormat {
     @com.google.gson.annotations.SerializedName("start")
     private Double start = null;
     /**
-     * to describe the scale
-     */
-    @com.google.gson.annotations.SerializedName("continuous_descriptions")
-    private List<ContentUnit> continuousDescriptions = null;
-    /**
      * end of ContinuousDataFormat
      */
     @com.google.gson.annotations.SerializedName("end")
     private Double end = null;
+    /**
+     * to describe the scale
+     */
+    @com.google.gson.annotations.SerializedName("continuous_descriptions")
+    private List<ContentUnit> continuousDescriptions = null;
     /**
      * description
      */
@@ -62,24 +62,6 @@ public class ContinuousDataFormat {
     }
 
     /**
-     * to describe the scale
-     *
-     * @return continuousDescriptions
-     **/
-    public List<ContentUnit> getContinuousDescriptions() {
-        return continuousDescriptions;
-    }
-
-    /**
-     * Sets the value of continuousDescriptions.
-     *
-     * @param continuousDescriptions the new value
-     */
-    public void setContinuousDescriptions(List<ContentUnit> continuousDescriptions) {
-        this.continuousDescriptions = continuousDescriptions;
-    }
-
-    /**
      * end of ContinuousDataFormat
      *
      * @return end
@@ -95,6 +77,24 @@ public class ContinuousDataFormat {
      */
     public void setEnd(Double end) {
         this.end = end;
+    }
+
+    /**
+     * to describe the scale
+     *
+     * @return continuousDescriptions
+     **/
+    public List<ContentUnit> getContinuousDescriptions() {
+        return continuousDescriptions;
+    }
+
+    /**
+     * Sets the value of continuousDescriptions.
+     *
+     * @param continuousDescriptions the new value
+     */
+    public void setContinuousDescriptions(List<ContentUnit> continuousDescriptions) {
+        this.continuousDescriptions = continuousDescriptions;
     }
 
     /**

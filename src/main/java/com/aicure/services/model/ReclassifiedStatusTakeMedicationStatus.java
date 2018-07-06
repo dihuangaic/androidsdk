@@ -18,49 +18,31 @@ package com.aicure.services.model;
 import com.aicure.services.model.TakeMedicationStatus;
 
 public class ReclassifiedStatusTakeMedicationStatus {
-    @com.google.gson.annotations.SerializedName("reclassified_status")
-    private TakeMedicationStatus reclassifiedStatus = null;
-    @com.google.gson.annotations.SerializedName("created_at")
-    private String createdAt = null;
-    @com.google.gson.annotations.SerializedName("reclassifier")
-    private String reclassifier = null;
     @com.google.gson.annotations.SerializedName("event_natural_key")
     private String eventNaturalKey = null;
+    @com.google.gson.annotations.SerializedName("reclassifier")
+    private String reclassifier = null;
+    @com.google.gson.annotations.SerializedName("created_at")
+    private String createdAt = null;
+    @com.google.gson.annotations.SerializedName("reclassified_status")
+    private TakeMedicationStatus reclassifiedStatus = null;
 
     /**
-     * Gets reclassifiedStatus
+     * Gets eventNaturalKey
      *
-     * @return reclassifiedStatus
+     * @return eventNaturalKey
      **/
-    public TakeMedicationStatus getReclassifiedStatus() {
-        return reclassifiedStatus;
+    public String getEventNaturalKey() {
+        return eventNaturalKey;
     }
 
     /**
-     * Sets the value of reclassifiedStatus.
+     * Sets the value of eventNaturalKey.
      *
-     * @param reclassifiedStatus the new value
+     * @param eventNaturalKey the new value
      */
-    public void setReclassifiedStatus(TakeMedicationStatus reclassifiedStatus) {
-        this.reclassifiedStatus = reclassifiedStatus;
-    }
-
-    /**
-     * Gets createdAt
-     *
-     * @return createdAt
-     **/
-    public String getCreatedAt() {
-        return createdAt;
-    }
-
-    /**
-     * Sets the value of createdAt.
-     *
-     * @param createdAt the new value
-     */
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
+    public void setEventNaturalKey(String eventNaturalKey) {
+        this.eventNaturalKey = eventNaturalKey;
     }
 
     /**
@@ -82,21 +64,39 @@ public class ReclassifiedStatusTakeMedicationStatus {
     }
 
     /**
-     * Gets eventNaturalKey
+     * Gets createdAt
      *
-     * @return eventNaturalKey
+     * @return createdAt
      **/
-    public String getEventNaturalKey() {
-        return eventNaturalKey;
+    public String getCreatedAt() {
+        return createdAt;
     }
 
     /**
-     * Sets the value of eventNaturalKey.
+     * Sets the value of createdAt.
      *
-     * @param eventNaturalKey the new value
+     * @param createdAt the new value
      */
-    public void setEventNaturalKey(String eventNaturalKey) {
-        this.eventNaturalKey = eventNaturalKey;
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    /**
+     * Gets reclassifiedStatus
+     *
+     * @return reclassifiedStatus
+     **/
+    public TakeMedicationStatus getReclassifiedStatus() {
+        return reclassifiedStatus;
+    }
+
+    /**
+     * Sets the value of reclassifiedStatus.
+     *
+     * @param reclassifiedStatus the new value
+     */
+    public void setReclassifiedStatus(TakeMedicationStatus reclassifiedStatus) {
+        this.reclassifiedStatus = reclassifiedStatus;
     }
 
 }

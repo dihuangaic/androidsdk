@@ -20,49 +20,49 @@ package com.aicure.services.model;
  * TakeMedicationStatusEntryValue
  **/
 public class TakeMedicationStatusEntryValue {
-    @com.google.gson.annotations.SerializedName("start_datetime")
-    private String startDatetime = null;
-    @com.google.gson.annotations.SerializedName("medication_id")
-    private String medicationId = null;
-    @com.google.gson.annotations.SerializedName("classification")
-    private String classification = null;
-    @com.google.gson.annotations.SerializedName("created_at")
-    private String createdAt = null;
-    @com.google.gson.annotations.SerializedName("video_id")
-    private String videoId = null;
-    @com.google.gson.annotations.SerializedName("updated_at")
-    private String updatedAt = null;
-    @com.google.gson.annotations.SerializedName("created_by")
-    private String createdBy = null;
-    @com.google.gson.annotations.SerializedName("source")
-    private String source = null;
-    @com.google.gson.annotations.SerializedName("reason")
-    private String reason = null;
-    @com.google.gson.annotations.SerializedName("tag")
-    private String tag = null;
-    @com.google.gson.annotations.SerializedName("end_datetime")
-    private String endDatetime = null;
     @com.google.gson.annotations.SerializedName("pill_id")
     private Integer pillId = null;
+    @com.google.gson.annotations.SerializedName("medication_id")
+    private String medicationId = null;
+    @com.google.gson.annotations.SerializedName("video_id")
+    private String videoId = null;
+    @com.google.gson.annotations.SerializedName("classification")
+    private String classification = null;
+    @com.google.gson.annotations.SerializedName("tag")
+    private String tag = null;
+    @com.google.gson.annotations.SerializedName("reason")
+    private String reason = null;
+    @com.google.gson.annotations.SerializedName("start_datetime")
+    private String startDatetime = null;
+    @com.google.gson.annotations.SerializedName("end_datetime")
+    private String endDatetime = null;
+    @com.google.gson.annotations.SerializedName("source")
+    private String source = null;
+    @com.google.gson.annotations.SerializedName("created_by")
+    private String createdBy = null;
+    @com.google.gson.annotations.SerializedName("created_at")
+    private String createdAt = null;
     @com.google.gson.annotations.SerializedName("updated_by")
     private String updatedBy = null;
+    @com.google.gson.annotations.SerializedName("updated_at")
+    private String updatedAt = null;
 
     /**
-     * Gets startDatetime
+     * Gets pillId
      *
-     * @return startDatetime
+     * @return pillId
      **/
-    public String getStartDatetime() {
-        return startDatetime;
+    public Integer getPillId() {
+        return pillId;
     }
 
     /**
-     * Sets the value of startDatetime.
+     * Sets the value of pillId.
      *
-     * @param startDatetime the new value
+     * @param pillId the new value
      */
-    public void setStartDatetime(String startDatetime) {
-        this.startDatetime = startDatetime;
+    public void setPillId(Integer pillId) {
+        this.pillId = pillId;
     }
 
     /**
@@ -84,42 +84,6 @@ public class TakeMedicationStatusEntryValue {
     }
 
     /**
-     * Gets classification
-     *
-     * @return classification
-     **/
-    public String getClassification() {
-        return classification;
-    }
-
-    /**
-     * Sets the value of classification.
-     *
-     * @param classification the new value
-     */
-    public void setClassification(String classification) {
-        this.classification = classification;
-    }
-
-    /**
-     * Gets createdAt
-     *
-     * @return createdAt
-     **/
-    public String getCreatedAt() {
-        return createdAt;
-    }
-
-    /**
-     * Sets the value of createdAt.
-     *
-     * @param createdAt the new value
-     */
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    /**
      * Gets videoId
      *
      * @return videoId
@@ -138,75 +102,21 @@ public class TakeMedicationStatusEntryValue {
     }
 
     /**
-     * Gets updatedAt
+     * Gets classification
      *
-     * @return updatedAt
+     * @return classification
      **/
-    public String getUpdatedAt() {
-        return updatedAt;
+    public String getClassification() {
+        return classification;
     }
 
     /**
-     * Sets the value of updatedAt.
+     * Sets the value of classification.
      *
-     * @param updatedAt the new value
+     * @param classification the new value
      */
-    public void setUpdatedAt(String updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    /**
-     * Gets createdBy
-     *
-     * @return createdBy
-     **/
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    /**
-     * Sets the value of createdBy.
-     *
-     * @param createdBy the new value
-     */
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    /**
-     * Gets source
-     *
-     * @return source
-     **/
-    public String getSource() {
-        return source;
-    }
-
-    /**
-     * Sets the value of source.
-     *
-     * @param source the new value
-     */
-    public void setSource(String source) {
-        this.source = source;
-    }
-
-    /**
-     * Gets reason
-     *
-     * @return reason
-     **/
-    public String getReason() {
-        return reason;
-    }
-
-    /**
-     * Sets the value of reason.
-     *
-     * @param reason the new value
-     */
-    public void setReason(String reason) {
-        this.reason = reason;
+    public void setClassification(String classification) {
+        this.classification = classification;
     }
 
     /**
@@ -228,6 +138,42 @@ public class TakeMedicationStatusEntryValue {
     }
 
     /**
+     * Gets reason
+     *
+     * @return reason
+     **/
+    public String getReason() {
+        return reason;
+    }
+
+    /**
+     * Sets the value of reason.
+     *
+     * @param reason the new value
+     */
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    /**
+     * Gets startDatetime
+     *
+     * @return startDatetime
+     **/
+    public String getStartDatetime() {
+        return startDatetime;
+    }
+
+    /**
+     * Sets the value of startDatetime.
+     *
+     * @param startDatetime the new value
+     */
+    public void setStartDatetime(String startDatetime) {
+        this.startDatetime = startDatetime;
+    }
+
+    /**
      * Gets endDatetime
      *
      * @return endDatetime
@@ -246,21 +192,57 @@ public class TakeMedicationStatusEntryValue {
     }
 
     /**
-     * Gets pillId
+     * Gets source
      *
-     * @return pillId
+     * @return source
      **/
-    public Integer getPillId() {
-        return pillId;
+    public String getSource() {
+        return source;
     }
 
     /**
-     * Sets the value of pillId.
+     * Sets the value of source.
      *
-     * @param pillId the new value
+     * @param source the new value
      */
-    public void setPillId(Integer pillId) {
-        this.pillId = pillId;
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    /**
+     * Gets createdBy
+     *
+     * @return createdBy
+     **/
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    /**
+     * Sets the value of createdBy.
+     *
+     * @param createdBy the new value
+     */
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    /**
+     * Gets createdAt
+     *
+     * @return createdAt
+     **/
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    /**
+     * Sets the value of createdAt.
+     *
+     * @param createdAt the new value
+     */
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
     }
 
     /**
@@ -279,6 +261,24 @@ public class TakeMedicationStatusEntryValue {
      */
     public void setUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
+    }
+
+    /**
+     * Gets updatedAt
+     *
+     * @return updatedAt
+     **/
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
+
+    /**
+     * Sets the value of updatedAt.
+     *
+     * @param updatedAt the new value
+     */
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
 }

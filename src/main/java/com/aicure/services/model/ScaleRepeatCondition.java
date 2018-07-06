@@ -23,11 +23,6 @@ import com.aicure.services.model.ScaleAnswerCondition;
  **/
 public class ScaleRepeatCondition {
     /**
-     * description
-     */
-    @com.google.gson.annotations.SerializedName("description")
-    private String description = null;
-    /**
      * condition of repeats, check ScaleAnswerCondition
      */
     @com.google.gson.annotations.SerializedName("condition")
@@ -37,24 +32,11 @@ public class ScaleRepeatCondition {
      */
     @com.google.gson.annotations.SerializedName("repeat_info")
     private RepeatInfo repeatInfo = null;
-
     /**
      * description
-     *
-     * @return description
-     **/
-    public String getDescription() {
-        return description;
-    }
-
-    /**
-     * Sets the value of description.
-     *
-     * @param description the new value
      */
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    @com.google.gson.annotations.SerializedName("description")
+    private String description = null;
 
     /**
      * condition of repeats, check ScaleAnswerCondition
@@ -90,6 +72,24 @@ public class ScaleRepeatCondition {
      */
     public void setRepeatInfo(RepeatInfo repeatInfo) {
         this.repeatInfo = repeatInfo;
+    }
+
+    /**
+     * description
+     *
+     * @return description
+     **/
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * Sets the value of description.
+     *
+     * @param description the new value
+     */
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }

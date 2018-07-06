@@ -31,77 +31,77 @@ public class Questionnaire {
     @com.google.gson.annotations.SerializedName("questionnaire_id")
     private String questionnaireId = null;
     /**
-     * Layout
-     */
-    @com.google.gson.annotations.SerializedName("layout")
-    private Layout layout = null;
-    /**
-     * description
-     */
-    @com.google.gson.annotations.SerializedName("description")
-    private String description = null;
-    /**
-     * title
-     */
-    @com.google.gson.annotations.SerializedName("title")
-    private TextLanguageSupportUnit title = null;
-    /**
-     * notes
-     */
-    @com.google.gson.annotations.SerializedName("notes")
-    private List<String> notes = null;
-    /**
-     * yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
-     */
-    @com.google.gson.annotations.SerializedName("updated_at")
-    private String updatedAt = null;
-    /**
-     * status
-     */
-    @com.google.gson.annotations.SerializedName("active_status")
-    private String activeStatus = null;
-    @com.google.gson.annotations.SerializedName("aiqscat")
-    private String aiqscat = null;
-    /**
      * trial uuid
      */
     @com.google.gson.annotations.SerializedName("trial")
     private String trial = null;
-    /**
-     * tag
-     */
-    @com.google.gson.annotations.SerializedName("tag")
-    private String tag = null;
-    /**
-     * mode
-     */
-    @com.google.gson.annotations.SerializedName("mode")
-    private String mode = null;
-    /**
-     * questions
-     */
-    @com.google.gson.annotations.SerializedName("questions")
-    private List<Question> questions = null;
-    /**
-     * policy
-     */
-    @com.google.gson.annotations.SerializedName("policy")
-    private Policy policy = null;
     /**
      * start_question_id, first question
      */
     @com.google.gson.annotations.SerializedName("start_question_id")
     private String startQuestionId = null;
     /**
+     * notes
+     */
+    @com.google.gson.annotations.SerializedName("notes")
+    private List<String> notes = null;
+    /**
+     * description
+     */
+    @com.google.gson.annotations.SerializedName("description")
+    private String description = null;
+    /**
+     * tag
+     */
+    @com.google.gson.annotations.SerializedName("tag")
+    private String tag = null;
+    /**
+     * policy
+     */
+    @com.google.gson.annotations.SerializedName("policy")
+    private Policy policy = null;
+    /**
      * yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
      */
     @com.google.gson.annotations.SerializedName("created_at")
     private String createdAt = null;
     /**
+     * yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
+     */
+    @com.google.gson.annotations.SerializedName("updated_at")
+    private String updatedAt = null;
+    /**
      * name
      */
     @com.google.gson.annotations.SerializedName("name")
     private String name = null;
+    /**
+     * Layout
+     */
+    @com.google.gson.annotations.SerializedName("layout")
+    private Layout layout = null;
+    /**
+     * questions
+     */
+    @com.google.gson.annotations.SerializedName("questions")
+    private List<Question> questions = null;
+    /**
+     * title
+     */
+    @com.google.gson.annotations.SerializedName("title")
+    private TextLanguageSupportUnit title = null;
+    /**
+     * status
+     */
+    @com.google.gson.annotations.SerializedName("active_status")
+    private String activeStatus = null;
+    /**
+     * mode
+     */
+    @com.google.gson.annotations.SerializedName("mode")
+    private String mode = null;
+    @com.google.gson.annotations.SerializedName("aiqscat")
+    private String aiqscat = null;
 
     /**
      * id, not required when create, required when update
@@ -119,132 +119,6 @@ public class Questionnaire {
      */
     public void setQuestionnaireId(String questionnaireId) {
         this.questionnaireId = questionnaireId;
-    }
-
-    /**
-     * Layout
-     *
-     * @return layout
-     **/
-    public Layout getLayout() {
-        return layout;
-    }
-
-    /**
-     * Sets the value of layout.
-     *
-     * @param layout the new value
-     */
-    public void setLayout(Layout layout) {
-        this.layout = layout;
-    }
-
-    /**
-     * description
-     *
-     * @return description
-     **/
-    public String getDescription() {
-        return description;
-    }
-
-    /**
-     * Sets the value of description.
-     *
-     * @param description the new value
-     */
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * title
-     *
-     * @return title
-     **/
-    public TextLanguageSupportUnit getTitle() {
-        return title;
-    }
-
-    /**
-     * Sets the value of title.
-     *
-     * @param title the new value
-     */
-    public void setTitle(TextLanguageSupportUnit title) {
-        this.title = title;
-    }
-
-    /**
-     * notes
-     *
-     * @return notes
-     **/
-    public List<String> getNotes() {
-        return notes;
-    }
-
-    /**
-     * Sets the value of notes.
-     *
-     * @param notes the new value
-     */
-    public void setNotes(List<String> notes) {
-        this.notes = notes;
-    }
-
-    /**
-     * yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
-     *
-     * @return updatedAt
-     **/
-    public String getUpdatedAt() {
-        return updatedAt;
-    }
-
-    /**
-     * Sets the value of updatedAt.
-     *
-     * @param updatedAt the new value
-     */
-    public void setUpdatedAt(String updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    /**
-     * status
-     *
-     * @return activeStatus
-     **/
-    public String getActiveStatus() {
-        return activeStatus;
-    }
-
-    /**
-     * Sets the value of activeStatus.
-     *
-     * @param activeStatus the new value
-     */
-    public void setActiveStatus(String activeStatus) {
-        this.activeStatus = activeStatus;
-    }
-
-    /**
-     * Gets aiqscat
-     *
-     * @return aiqscat
-     **/
-    public String getAiqscat() {
-        return aiqscat;
-    }
-
-    /**
-     * Sets the value of aiqscat.
-     *
-     * @param aiqscat the new value
-     */
-    public void setAiqscat(String aiqscat) {
-        this.aiqscat = aiqscat;
     }
 
     /**
@@ -266,6 +140,60 @@ public class Questionnaire {
     }
 
     /**
+     * start_question_id, first question
+     *
+     * @return startQuestionId
+     **/
+    public String getStartQuestionId() {
+        return startQuestionId;
+    }
+
+    /**
+     * Sets the value of startQuestionId.
+     *
+     * @param startQuestionId the new value
+     */
+    public void setStartQuestionId(String startQuestionId) {
+        this.startQuestionId = startQuestionId;
+    }
+
+    /**
+     * notes
+     *
+     * @return notes
+     **/
+    public List<String> getNotes() {
+        return notes;
+    }
+
+    /**
+     * Sets the value of notes.
+     *
+     * @param notes the new value
+     */
+    public void setNotes(List<String> notes) {
+        this.notes = notes;
+    }
+
+    /**
+     * description
+     *
+     * @return description
+     **/
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * Sets the value of description.
+     *
+     * @param description the new value
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
      * tag
      *
      * @return tag
@@ -281,42 +209,6 @@ public class Questionnaire {
      */
     public void setTag(String tag) {
         this.tag = tag;
-    }
-
-    /**
-     * mode
-     *
-     * @return mode
-     **/
-    public String getMode() {
-        return mode;
-    }
-
-    /**
-     * Sets the value of mode.
-     *
-     * @param mode the new value
-     */
-    public void setMode(String mode) {
-        this.mode = mode;
-    }
-
-    /**
-     * questions
-     *
-     * @return questions
-     **/
-    public List<Question> getQuestions() {
-        return questions;
-    }
-
-    /**
-     * Sets the value of questions.
-     *
-     * @param questions the new value
-     */
-    public void setQuestions(List<Question> questions) {
-        this.questions = questions;
     }
 
     /**
@@ -338,24 +230,6 @@ public class Questionnaire {
     }
 
     /**
-     * start_question_id, first question
-     *
-     * @return startQuestionId
-     **/
-    public String getStartQuestionId() {
-        return startQuestionId;
-    }
-
-    /**
-     * Sets the value of startQuestionId.
-     *
-     * @param startQuestionId the new value
-     */
-    public void setStartQuestionId(String startQuestionId) {
-        this.startQuestionId = startQuestionId;
-    }
-
-    /**
      * yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
      *
      * @return createdAt
@@ -374,6 +248,24 @@ public class Questionnaire {
     }
 
     /**
+     * yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
+     *
+     * @return updatedAt
+     **/
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
+
+    /**
+     * Sets the value of updatedAt.
+     *
+     * @param updatedAt the new value
+     */
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    /**
      * name
      *
      * @return name
@@ -389,6 +281,114 @@ public class Questionnaire {
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+    /**
+     * Layout
+     *
+     * @return layout
+     **/
+    public Layout getLayout() {
+        return layout;
+    }
+
+    /**
+     * Sets the value of layout.
+     *
+     * @param layout the new value
+     */
+    public void setLayout(Layout layout) {
+        this.layout = layout;
+    }
+
+    /**
+     * questions
+     *
+     * @return questions
+     **/
+    public List<Question> getQuestions() {
+        return questions;
+    }
+
+    /**
+     * Sets the value of questions.
+     *
+     * @param questions the new value
+     */
+    public void setQuestions(List<Question> questions) {
+        this.questions = questions;
+    }
+
+    /**
+     * title
+     *
+     * @return title
+     **/
+    public TextLanguageSupportUnit getTitle() {
+        return title;
+    }
+
+    /**
+     * Sets the value of title.
+     *
+     * @param title the new value
+     */
+    public void setTitle(TextLanguageSupportUnit title) {
+        this.title = title;
+    }
+
+    /**
+     * status
+     *
+     * @return activeStatus
+     **/
+    public String getActiveStatus() {
+        return activeStatus;
+    }
+
+    /**
+     * Sets the value of activeStatus.
+     *
+     * @param activeStatus the new value
+     */
+    public void setActiveStatus(String activeStatus) {
+        this.activeStatus = activeStatus;
+    }
+
+    /**
+     * mode
+     *
+     * @return mode
+     **/
+    public String getMode() {
+        return mode;
+    }
+
+    /**
+     * Sets the value of mode.
+     *
+     * @param mode the new value
+     */
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
+
+    /**
+     * Gets aiqscat
+     *
+     * @return aiqscat
+     **/
+    public String getAiqscat() {
+        return aiqscat;
+    }
+
+    /**
+     * Sets the value of aiqscat.
+     *
+     * @param aiqscat the new value
+     */
+    public void setAiqscat(String aiqscat) {
+        this.aiqscat = aiqscat;
     }
 
 }

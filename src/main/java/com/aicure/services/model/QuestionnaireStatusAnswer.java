@@ -22,10 +22,12 @@ package com.aicure.services.model;
 public class QuestionnaireStatusAnswer {
     @com.google.gson.annotations.SerializedName("answer_key")
     private String answerKey = null;
-    @com.google.gson.annotations.SerializedName("blobfile_uri")
-    private String blobfileUri = null;
+    @com.google.gson.annotations.SerializedName("translation_key")
+    private String translationKey = null;
     @com.google.gson.annotations.SerializedName("freeform_text")
     private String freeformText = null;
+    @com.google.gson.annotations.SerializedName("blobfile_uri")
+    private String blobfileUri = null;
 
     /**
      * Gets answerKey
@@ -46,21 +48,21 @@ public class QuestionnaireStatusAnswer {
     }
 
     /**
-     * Gets blobfileUri
+     * Gets translationKey
      *
-     * @return blobfileUri
+     * @return translationKey
      **/
-    public String getBlobfileUri() {
-        return blobfileUri;
+    public String getTranslationKey() {
+        return translationKey;
     }
 
     /**
-     * Sets the value of blobfileUri.
+     * Sets the value of translationKey.
      *
-     * @param blobfileUri the new value
+     * @param translationKey the new value
      */
-    public void setBlobfileUri(String blobfileUri) {
-        this.blobfileUri = blobfileUri;
+    public void setTranslationKey(String translationKey) {
+        this.translationKey = translationKey;
     }
 
     /**
@@ -79,6 +81,24 @@ public class QuestionnaireStatusAnswer {
      */
     public void setFreeformText(String freeformText) {
         this.freeformText = freeformText;
+    }
+
+    /**
+     * Gets blobfileUri
+     *
+     * @return blobfileUri
+     **/
+    public String getBlobfileUri() {
+        return blobfileUri;
+    }
+
+    /**
+     * Sets the value of blobfileUri.
+     *
+     * @param blobfileUri the new value
+     */
+    public void setBlobfileUri(String blobfileUri) {
+        this.blobfileUri = blobfileUri;
     }
 
 }

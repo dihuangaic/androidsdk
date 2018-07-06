@@ -20,28 +20,10 @@ import com.aicure.services.model.TakeMedicationStatusEntry;
 import com.aicure.services.model.TakeMedicationStatusType;
 
 public class TakeMedicationStatus {
-    @com.google.gson.annotations.SerializedName("status_type")
-    private TakeMedicationStatusType statusType = null;
     @com.google.gson.annotations.SerializedName("entries")
     private List<TakeMedicationStatusEntry> entries = null;
-
-    /**
-     * Gets statusType
-     *
-     * @return statusType
-     **/
-    public TakeMedicationStatusType getStatusType() {
-        return statusType;
-    }
-
-    /**
-     * Sets the value of statusType.
-     *
-     * @param statusType the new value
-     */
-    public void setStatusType(TakeMedicationStatusType statusType) {
-        this.statusType = statusType;
-    }
+    @com.google.gson.annotations.SerializedName("status_type")
+    private TakeMedicationStatusType statusType = null;
 
     /**
      * Gets entries
@@ -59,6 +41,24 @@ public class TakeMedicationStatus {
      */
     public void setEntries(List<TakeMedicationStatusEntry> entries) {
         this.entries = entries;
+    }
+
+    /**
+     * Gets statusType
+     *
+     * @return statusType
+     **/
+    public TakeMedicationStatusType getStatusType() {
+        return statusType;
+    }
+
+    /**
+     * Sets the value of statusType.
+     *
+     * @param statusType the new value
+     */
+    public void setStatusType(TakeMedicationStatusType statusType) {
+        this.statusType = statusType;
     }
 
 }

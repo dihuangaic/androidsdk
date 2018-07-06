@@ -17,12 +17,30 @@ package com.aicure.services.model;
 
 
 public class UnansweredQuestionnaire {
+    @com.google.gson.annotations.SerializedName("questionnaire_name")
+    private String questionnaireName = null;
     @com.google.gson.annotations.SerializedName("questionnaire_id")
     private String questionnaireId = null;
     @com.google.gson.annotations.SerializedName("schedule_id")
     private String scheduleId = null;
-    @com.google.gson.annotations.SerializedName("questionnaire_name")
-    private String questionnaireName = null;
+
+    /**
+     * Gets questionnaireName
+     *
+     * @return questionnaireName
+     **/
+    public String getQuestionnaireName() {
+        return questionnaireName;
+    }
+
+    /**
+     * Sets the value of questionnaireName.
+     *
+     * @param questionnaireName the new value
+     */
+    public void setQuestionnaireName(String questionnaireName) {
+        this.questionnaireName = questionnaireName;
+    }
 
     /**
      * Gets questionnaireId
@@ -58,24 +76,6 @@ public class UnansweredQuestionnaire {
      */
     public void setScheduleId(String scheduleId) {
         this.scheduleId = scheduleId;
-    }
-
-    /**
-     * Gets questionnaireName
-     *
-     * @return questionnaireName
-     **/
-    public String getQuestionnaireName() {
-        return questionnaireName;
-    }
-
-    /**
-     * Sets the value of questionnaireName.
-     *
-     * @param questionnaireName the new value
-     */
-    public void setQuestionnaireName(String questionnaireName) {
-        this.questionnaireName = questionnaireName;
     }
 
 }
