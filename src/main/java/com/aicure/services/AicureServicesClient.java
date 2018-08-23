@@ -32,11 +32,14 @@ import com.aicure.services.model.ArrayOfKitNumKey;
 import com.aicure.services.model.Medication;
 import com.aicure.services.model.MedicationAlgorithm;
 import com.aicure.services.model.ArrayOfAlgorithmModel;
+import com.aicure.services.model.CheckNotificationMessageResult;
 import com.aicure.services.model.NotificationMessage;
 import com.aicure.services.model.NotificationSNSObject;
 import com.aicure.services.model.ArrayOfNotificationMessages;
 import com.aicure.services.model.Questionnaire;
 import com.aicure.services.model.ArrayOfUnansweredQuestionnaires;
+import com.aicure.services.model.TranslationDetails;
+import com.aicure.services.model.ArrayOfTranslationDetails;
 
 
 @com.amazonaws.mobileconnectors.apigateway.annotation.Service(endpoint = "https://yq46sgsspb.execute-api.us-west-2.amazonaws.com/dev")
@@ -700,6 +703,46 @@ public interface AicureServicesClient {
     /**
      * 
      * 
+     * @param trial 
+     * @param notificationType 
+     * @param authorization 
+     * @param user 
+     * @param msgId 
+     * @return CheckNotificationMessageResult
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/notification_message/check-status/trial/{trial}/user/{user}", method = "GET")
+    CheckNotificationMessageResult notificationMessageCheckStatusTrialTrialUserUserGet(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "trial", location = "path")
+            String trial,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "notification_type", location = "query")
+            String notificationType,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
+            String authorization,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "user", location = "path")
+            String user,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "msg_id", location = "query")
+            String msgId);
+    
+    /**
+     * 
+     * 
+     * @param notificationType 
+     * @param authorization 
+     * @param msgId 
+     * @return CheckNotificationMessageResult
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/notification_message/check-status/trial/{trial}/user/{user}", method = "OPTIONS")
+    CheckNotificationMessageResult notificationMessageCheckStatusTrialTrialUserUserOptions(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "notification_type", location = "query")
+            String notificationType,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
+            String authorization,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "msg_id", location = "query")
+            String msgId);
+    
+    /**
+     * 
+     * 
      * @param authorization 
      * @param body 
      * @param msgId 
@@ -925,6 +968,7 @@ public interface AicureServicesClient {
      * @param questionnaireId 
      * @param language 
      * @param authorization 
+     * @param msgId 
      * @return Questionnaire
      */
     @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/questionnaires/language_support/questionnaire_id/{questionnaire_id}/language/{language}", method = "GET")
@@ -934,7 +978,9 @@ public interface AicureServicesClient {
             @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "language", location = "path")
             String language,
             @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
-            String authorization);
+            String authorization,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "msg_id", location = "query")
+            String msgId);
     
     /**
      * 
@@ -1036,6 +1082,103 @@ public interface AicureServicesClient {
             String authorization,
             @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "audit_trail_id", location = "query")
             String auditTrailId);
+    
+    /**
+     * 
+     * 
+     * @param msgId 
+     * @param authorization 
+     * @param body 
+     * @return TranslationDetails
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/translation_details/save", method = "PUT")
+    TranslationDetails translationDetailsSavePut(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "msg_id", location = "query")
+            String msgId,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
+            String authorization,
+            TranslationDetails body);
+    
+    /**
+     * 
+     * 
+     * @return void
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/translation_details/save", method = "OPTIONS")
+    void translationDetailsSaveOptions();
+    
+    /**
+     * 
+     * 
+     * @param translationKeyId 
+     * @param authorization 
+     * @param msgId 
+     * @return ArrayOfTranslationDetails
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/translation_details/translation_key_id/{translation_key_id}", method = "GET")
+    ArrayOfTranslationDetails translationDetailsTranslationKeyIdTranslationKeyIdGet(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "translation_key_id", location = "path")
+            String translationKeyId,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
+            String authorization,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "msg_id", location = "query")
+            String msgId);
+    
+    /**
+     * 
+     * 
+     * @param translationKeyId 
+     * @return void
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/translation_details/translation_key_id/{translation_key_id}", method = "OPTIONS")
+    void translationDetailsTranslationKeyIdTranslationKeyIdOptions(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "translation_key_id", location = "path")
+            String translationKeyId);
+    
+    /**
+     * 
+     * 
+     * @param translationKeyId 
+     * @param language 
+     * @param authorization 
+     * @return TranslationDetails
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/translation_details/translation_key_id/{translation_key_id}/language/{language}", method = "GET")
+    TranslationDetails translationDetailsTranslationKeyIdTranslationKeyIdLanguageLanguageGet(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "translation_key_id", location = "path")
+            String translationKeyId,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "language", location = "path")
+            String language,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
+            String authorization);
+    
+    /**
+     * 
+     * 
+     * @param translationKeyId 
+     * @param language 
+     * @param authorization 
+     * @param msgId 
+     * @return void
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/translation_details/translation_key_id/{translation_key_id}/language/{language}", method = "DELETE")
+    void translationDetailsTranslationKeyIdTranslationKeyIdLanguageLanguageDelete(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "translation_key_id", location = "path")
+            String translationKeyId,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "language", location = "path")
+            String language,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
+            String authorization,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "msg_id", location = "query")
+            String msgId);
+    
+    /**
+     * 
+     * 
+     * @return void
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/translation_details/translation_key_id/{translation_key_id}/language/{language}", method = "OPTIONS")
+    void translationDetailsTranslationKeyIdTranslationKeyIdLanguageLanguageOptions();
     
 }
 

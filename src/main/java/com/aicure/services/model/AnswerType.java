@@ -11,7 +11,7 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum AnswerType {
 
-    Free_video("free_video"),
+	Free_video("free_video"),
     Free_audio("free_audio"),
     Free_image("free_image"),
     Free_text_date("free_text_date"),
@@ -32,7 +32,9 @@ public enum AnswerType {
     Numeric_scale_discrete("numeric_scale_discrete"),
     Numeric_scale_continuous("numeric_scale_continuous"),
     Instruction_countdown("instruction_countdown"),
-    Instruction_text("instruction_text");
+    Instruction_text("instruction_text"),
+    Smiley_face_scale("smiley_face_scale"),
+    Numeric_scale_boxes("numeric_scale_boxes");
 
     private String value;
 
