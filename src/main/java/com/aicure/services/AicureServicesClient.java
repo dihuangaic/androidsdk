@@ -17,8 +17,10 @@ package com.aicure.services;
 
 import java.util.*;
 
-import com.aicure.services.model.Alarm;
+import com.aicure.services.model.EndOfTreatmentBusinessLayerResponse;
 import com.aicure.services.model.CustomizedError;
+import com.aicure.services.model.EndOfTreatmentBusinessLayerParams;
+import com.aicure.services.model.Alarm;
 import com.aicure.services.model.CompletedActionSchedule;
 import com.aicure.services.model.ActionSchedule;
 import com.aicure.services.model.ArrayOfStrings;
@@ -36,6 +38,9 @@ import com.aicure.services.model.CheckNotificationMessageResult;
 import com.aicure.services.model.NotificationMessage;
 import com.aicure.services.model.NotificationSNSObject;
 import com.aicure.services.model.ArrayOfNotificationMessages;
+import com.aicure.services.model.UserLevelParamStatus;
+import com.aicure.services.model.ProtocolParams;
+import com.aicure.services.model.ArrayOfProtocolParams;
 import com.aicure.services.model.Questionnaire;
 import com.aicure.services.model.ArrayOfUnansweredQuestionnaires;
 import com.aicure.services.model.TranslationDetails;
@@ -52,6 +57,36 @@ public interface AicureServicesClient {
      * @return ApiResponse
      */
     com.amazonaws.mobileconnectors.apigateway.ApiResponse execute(com.amazonaws.mobileconnectors.apigateway.ApiRequest request);
+    
+    /**
+     * 
+     * 
+     * @param authorization 
+     * @param auditTrailId 
+     * @param body 
+     * @param msgId 
+     * @param activeStatus 
+     * @return EndOfTreatmentBusinessLayerResponse
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/action_schedule_updates/questionnaire/end_of_treatment", method = "PUT")
+    EndOfTreatmentBusinessLayerResponse actionScheduleUpdatesQuestionnaireEndOfTreatmentPut(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
+            String authorization,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "audit_trail_id", location = "query")
+            String auditTrailId,
+            EndOfTreatmentBusinessLayerParams body,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "msg_id", location = "query")
+            String msgId,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "active_status", location = "query")
+            String activeStatus);
+    
+    /**
+     * 
+     * 
+     * @return void
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/action_schedule_updates/questionnaire/end_of_treatment", method = "OPTIONS")
+    void actionScheduleUpdatesQuestionnaireEndOfTreatmentOptions();
     
     /**
      * 
@@ -925,6 +960,173 @@ public interface AicureServicesClient {
             String user,
             @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "msg_id", location = "query")
             String msgId);
+    
+    /**
+     * 
+     * 
+     * @param trial 
+     * @param authorization 
+     * @param user 
+     * @param msgId 
+     * @return UserLevelParamStatus
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/protocol_params/check_status/trial/{trial}/user/{user}", method = "GET")
+    UserLevelParamStatus protocolParamsCheckStatusTrialTrialUserUserGet(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "trial", location = "path")
+            String trial,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
+            String authorization,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "user", location = "path")
+            String user,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "msg_id", location = "query")
+            String msgId);
+    
+    /**
+     * 
+     * 
+     * @return void
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/protocol_params/check_status/trial/{trial}/user/{user}", method = "OPTIONS")
+    void protocolParamsCheckStatusTrialTrialUserUserOptions();
+    
+    /**
+     * 
+     * 
+     * @param authorization 
+     * @param body 
+     * @param msgId 
+     * @return ProtocolParams
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/protocol_params/create", method = "POST")
+    ProtocolParams protocolParamsCreatePost(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
+            String authorization,
+            ProtocolParams body,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "msg_id", location = "query")
+            String msgId);
+    
+    /**
+     * 
+     * 
+     * @return void
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/protocol_params/create", method = "OPTIONS")
+    void protocolParamsCreateOptions();
+    
+    /**
+     * 
+     * 
+     * @param trial 
+     * @param authorization 
+     * @param user 
+     * @param msgId 
+     * @return ProtocolParams
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/protocol_params/finish_protocol_params/trial/{trial}/user/{user}", method = "PUT")
+    ProtocolParams protocolParamsFinishProtocolParamsTrialTrialUserUserPut(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "trial", location = "path")
+            String trial,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
+            String authorization,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "user", location = "path")
+            String user,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "msg_id", location = "query")
+            String msgId);
+    
+    /**
+     * 
+     * 
+     * @return void
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/protocol_params/finish_protocol_params/trial/{trial}/user/{user}", method = "OPTIONS")
+    void protocolParamsFinishProtocolParamsTrialTrialUserUserOptions();
+    
+    /**
+     * 
+     * 
+     * @param trial 
+     * @param authorization 
+     * @param user 
+     * @param msgId 
+     * @return ArrayOfProtocolParams
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/protocol_params/trial/{trial}/user/{user}", method = "GET")
+    ArrayOfProtocolParams protocolParamsTrialTrialUserUserGet(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "trial", location = "path")
+            String trial,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
+            String authorization,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "user", location = "path")
+            String user,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "msg_id", location = "query")
+            String msgId);
+    
+    /**
+     * 
+     * 
+     * @return void
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/protocol_params/trial/{trial}/user/{user}", method = "OPTIONS")
+    void protocolParamsTrialTrialUserUserOptions();
+    
+    /**
+     * 
+     * 
+     * @param trial 
+     * @param auditTrailId 
+     * @param authorization 
+     * @param user 
+     * @param msgId 
+     * @return ProtocolParams
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/protocol_params/trial/{trial}/user/{user}/audit_trail_id/{audit_trail_id}", method = "GET")
+    ProtocolParams protocolParamsTrialTrialUserUserAuditTrailIdAuditTrailIdGet(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "trial", location = "path")
+            String trial,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "audit_trail_id", location = "path")
+            String auditTrailId,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
+            String authorization,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "user", location = "path")
+            String user,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "msg_id", location = "query")
+            String msgId);
+    
+    /**
+     * 
+     * 
+     * @return void
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/protocol_params/trial/{trial}/user/{user}/audit_trail_id/{audit_trail_id}", method = "OPTIONS")
+    void protocolParamsTrialTrialUserUserAuditTrailIdAuditTrailIdOptions();
+    
+    /**
+     * 
+     * 
+     * @param trial 
+     * @param authorization 
+     * @param user 
+     * @param msgId 
+     * @return ProtocolParams
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/protocol_params/trigger_protocol_params/trial/{trial}/user/{user}", method = "PUT")
+    ProtocolParams protocolParamsTriggerProtocolParamsTrialTrialUserUserPut(
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "trial", location = "path")
+            String trial,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "Authorization", location = "header")
+            String authorization,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "user", location = "path")
+            String user,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "msg_id", location = "query")
+            String msgId);
+    
+    /**
+     * 
+     * 
+     * @return void
+     */
+    @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/protocol_params/trigger_protocol_params/trial/{trial}/user/{user}", method = "OPTIONS")
+    void protocolParamsTriggerProtocolParamsTrialTrialUserUserOptions();
     
     /**
      * 
