@@ -35,7 +35,7 @@ public class UserLevelParamStatus {
      * status
      */
     @com.google.gson.annotations.SerializedName("status")
-    private UserLevelParamStatusType status = null;
+    private String status = null;
     /**
      * queried_at
      */
@@ -83,7 +83,7 @@ public class UserLevelParamStatus {
      *
      * @return status
      **/
-    public UserLevelParamStatusType getStatus() {
+    public String getStatus() {
         return status;
     }
 
@@ -92,7 +92,7 @@ public class UserLevelParamStatus {
      *
      * @param status the new value
      */
-    public void setStatus(UserLevelParamStatusType status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
