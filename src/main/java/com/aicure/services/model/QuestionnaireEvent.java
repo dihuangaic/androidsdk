@@ -39,6 +39,13 @@ public class QuestionnaireEvent {
     private String language = null;
     @com.google.gson.annotations.SerializedName("action_type")
     private String actionType = null;
+    /**
+     * event_type
+     */
+    @com.google.gson.annotations.SerializedName("event_type")
+    private String eventType = null;
+    @com.google.gson.annotations.SerializedName("tzid")
+    private String tzid = null;
     @com.google.gson.annotations.SerializedName("tags")
     private List<String> tags = null;
     @com.google.gson.annotations.SerializedName("policy")
@@ -216,6 +223,42 @@ public class QuestionnaireEvent {
      */
     public void setActionType(String actionType) {
         this.actionType = actionType;
+    }
+
+    /**
+     * event_type
+     *
+     * @return eventType
+     **/
+    public String getEventType() {
+        return eventType;
+    }
+
+    /**
+     * Sets the value of eventType.
+     *
+     * @param eventType the new value
+     */
+    public void setEventType(String eventType) {
+        this.eventType = eventType;
+    }
+
+    /**
+     * Gets tzid
+     *
+     * @return tzid
+     **/
+    public String getTzid() {
+        return tzid;
+    }
+
+    /**
+     * Sets the value of tzid.
+     *
+     * @param tzid the new value
+     */
+    public void setTzid(String tzid) {
+        this.tzid = tzid;
     }
 
     /**
