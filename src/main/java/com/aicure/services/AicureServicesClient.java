@@ -1107,6 +1107,7 @@ public interface AicureServicesClient {
      * @param authorization 
      * @param user 
      * @param msgId 
+     * @param tzid 
      * @return ProtocolParams
      */
     @com.amazonaws.mobileconnectors.apigateway.annotation.Operation(path = "/protocol_params/trigger_protocol_params/trial/{trial}/user/{user}", method = "PUT")
@@ -1118,7 +1119,9 @@ public interface AicureServicesClient {
             @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "user", location = "path")
             String user,
             @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "msg_id", location = "query")
-            String msgId);
+            String msgId,
+            @com.amazonaws.mobileconnectors.apigateway.annotation.Parameter(name = "tzid", location = "query")
+            String tzid);
     
     /**
      * 
