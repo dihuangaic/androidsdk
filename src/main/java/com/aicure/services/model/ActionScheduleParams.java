@@ -17,6 +17,7 @@ package com.aicure.services.model;
 
 import com.aicure.services.model.ActionScheduleTerminationParams;
 import com.aicure.services.model.ActionScheduleUpdateParams;
+import com.aicure.services.model.SegmentQuestionnaireActionScheduleUpdate;
 
 /**
  * ActionScheduleParams details
@@ -32,6 +33,11 @@ public class ActionScheduleParams {
      */
     @com.google.gson.annotations.SerializedName("update_params")
     private ActionScheduleUpdateParams updateParams = null;
+    /**
+     * params for action schedule update
+     */
+    @com.google.gson.annotations.SerializedName("segment_questionnaire_action_schedule_update")
+    private SegmentQuestionnaireActionScheduleUpdate segmentQuestionnaireActionScheduleUpdate = null;
 
     /**
      * params for action schedule terminate
@@ -67,6 +73,24 @@ public class ActionScheduleParams {
      */
     public void setUpdateParams(ActionScheduleUpdateParams updateParams) {
         this.updateParams = updateParams;
+    }
+
+    /**
+     * params for action schedule update
+     *
+     * @return segmentQuestionnaireActionScheduleUpdate
+     **/
+    public SegmentQuestionnaireActionScheduleUpdate getSegmentQuestionnaireActionScheduleUpdate() {
+        return segmentQuestionnaireActionScheduleUpdate;
+    }
+
+    /**
+     * Sets the value of segmentQuestionnaireActionScheduleUpdate.
+     *
+     * @param segmentQuestionnaireActionScheduleUpdate the new value
+     */
+    public void setSegmentQuestionnaireActionScheduleUpdate(SegmentQuestionnaireActionScheduleUpdate segmentQuestionnaireActionScheduleUpdate) {
+        this.segmentQuestionnaireActionScheduleUpdate = segmentQuestionnaireActionScheduleUpdate;
     }
 
 }

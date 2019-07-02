@@ -1,7 +1,7 @@
 apply plugin: 'java'
 
 group = 'com.aicure.services'
-project.version = '1.0'
+project.version = '1.1'
 sourceCompatibility = 1.6
 targetCompatibility = 1.6
 

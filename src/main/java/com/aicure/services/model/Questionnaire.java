@@ -45,14 +45,6 @@ public class Questionnaire {
      */
     @com.google.gson.annotations.SerializedName("notes")
     private List<String> notes = null;
-    
-    /**
-     * Priority
-     */
-    @com.google.gson.annotations.SerializedName("priority")
-    private Integer priority = null;
-    
-    
     /**
      * description
      */
@@ -110,6 +102,11 @@ public class Questionnaire {
     private String mode = null;
     @com.google.gson.annotations.SerializedName("aiqscat")
     private String aiqscat = null;
+    /**
+     * priority
+     */
+    @com.google.gson.annotations.SerializedName("priority")
+    private Integer priority = null;
 
     /**
      * id, not required when create, required when update
@@ -399,13 +396,22 @@ public class Questionnaire {
         this.aiqscat = aiqscat;
     }
 
-	public Integer getPriority() {
-		return priority;
-	}
+    /**
+     * priority
+     *
+     * @return priority
+     **/
+    public Integer getPriority() {
+        return priority;
+    }
 
-	public void setPriority(Integer priority) {
-		this.priority = priority;
-	}
+    /**
+     * Sets the value of priority.
+     *
+     * @param priority the new value
+     */
+    public void setPriority(Integer priority) {
+        this.priority = priority;
+    }
 
-    
 }
