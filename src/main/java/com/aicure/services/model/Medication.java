@@ -15,8 +15,10 @@
 
 package com.aicure.services.model;
 
+import com.aicure.services.model.AlgorithmModel;
 import java.util.*;
 import java.util.Map;
+import com.aicure.services.model.MedicationImage;
 import com.aicure.services.model.Policy;
 
 /**
@@ -33,6 +35,16 @@ public class Medication {
      */
     @com.google.gson.annotations.SerializedName("trial")
     private String trial = null;
+    /**
+     * Medication common name
+     */
+    @com.google.gson.annotations.SerializedName("common_name")
+    private String commonName = null;
+    /**
+     * Medication common display name
+     */
+    @com.google.gson.annotations.SerializedName("common_display_name")
+    private String commonDisplayName = null;
     /**
      * medication name
      */
@@ -59,7 +71,7 @@ public class Medication {
     @com.google.gson.annotations.SerializedName("amount")
     private Double amount = null;
     /**
-     * max_per_dose for different types of participant, Map[String,Integer]
+     * max_per_dose for different questionnaire_supports of participant, Map[String,Integer]
      */
     @com.google.gson.annotations.SerializedName("max_per_dose")
     private Map<String, Integer> maxPerDose = null;
@@ -83,6 +95,26 @@ public class Medication {
      */
     @com.google.gson.annotations.SerializedName("policy")
     private Policy policy = null;
+    /**
+     * List of medication algorithm-models
+     */
+    @com.google.gson.annotations.SerializedName("models")
+    private List<AlgorithmModel> models = null;
+    /**
+     * ID of bottle of medication
+     */
+    @com.google.gson.annotations.SerializedName("bottle_id")
+    private String bottleId = null;
+    /**
+     * manufacturer of medication
+     */
+    @com.google.gson.annotations.SerializedName("manufacturer")
+    private String manufacturer = null;
+    /**
+     * List of medication images
+     */
+    @com.google.gson.annotations.SerializedName("images")
+    private List<MedicationImage> images = null;
     /**
      * yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
      */
@@ -128,6 +160,42 @@ public class Medication {
      */
     public void setTrial(String trial) {
         this.trial = trial;
+    }
+
+    /**
+     * Medication common name
+     *
+     * @return commonName
+     **/
+    public String getCommonName() {
+        return commonName;
+    }
+
+    /**
+     * Sets the value of commonName.
+     *
+     * @param commonName the new value
+     */
+    public void setCommonName(String commonName) {
+        this.commonName = commonName;
+    }
+
+    /**
+     * Medication common display name
+     *
+     * @return commonDisplayName
+     **/
+    public String getCommonDisplayName() {
+        return commonDisplayName;
+    }
+
+    /**
+     * Sets the value of commonDisplayName.
+     *
+     * @param commonDisplayName the new value
+     */
+    public void setCommonDisplayName(String commonDisplayName) {
+        this.commonDisplayName = commonDisplayName;
     }
 
     /**
@@ -221,7 +289,7 @@ public class Medication {
     }
 
     /**
-     * max_per_dose for different types of participant, Map[String,Integer]
+     * max_per_dose for different questionnaire_supports of participant, Map[String,Integer]
      *
      * @return maxPerDose
      **/
@@ -308,6 +376,78 @@ public class Medication {
      */
     public void setPolicy(Policy policy) {
         this.policy = policy;
+    }
+
+    /**
+     * List of medication algorithm-models
+     *
+     * @return models
+     **/
+    public List<AlgorithmModel> getModels() {
+        return models;
+    }
+
+    /**
+     * Sets the value of models.
+     *
+     * @param models the new value
+     */
+    public void setModels(List<AlgorithmModel> models) {
+        this.models = models;
+    }
+
+    /**
+     * ID of bottle of medication
+     *
+     * @return bottleId
+     **/
+    public String getBottleId() {
+        return bottleId;
+    }
+
+    /**
+     * Sets the value of bottleId.
+     *
+     * @param bottleId the new value
+     */
+    public void setBottleId(String bottleId) {
+        this.bottleId = bottleId;
+    }
+
+    /**
+     * manufacturer of medication
+     *
+     * @return manufacturer
+     **/
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    /**
+     * Sets the value of manufacturer.
+     *
+     * @param manufacturer the new value
+     */
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    /**
+     * List of medication images
+     *
+     * @return images
+     **/
+    public List<MedicationImage> getImages() {
+        return images;
+    }
+
+    /**
+     * Sets the value of images.
+     *
+     * @param images the new value
+     */
+    public void setImages(List<MedicationImage> images) {
+        this.images = images;
     }
 
     /**
